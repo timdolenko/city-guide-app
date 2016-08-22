@@ -15,19 +15,16 @@
 		3C0F84011D69D5EE0035E3B6 /* AccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0F83FD1D69D5EE0035E3B6 /* AccordionHeaderView.xib */; };
 		3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F83FF1D69D5EE0035E3B6 /* TaxiVC.swift */; };
 		3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */; };
-		3C1421041D43599200D87096 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1421031D43599200D87096 /* WeatherForecast.swift */; };
 		3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4867521D2A3E4A000B6834 /* AppDelegate.swift */; };
 		3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4867541D2A3E4A000B6834 /* MainVC.swift */; };
 		3C4867581D2A3E4A000B6834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867561D2A3E4A000B6834 /* Main.storyboard */; };
 		3C48675A1D2A3E4A000B6834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867591D2A3E4A000B6834 /* Assets.xcassets */; };
 		3C48675D1D2A3E4A000B6834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C48675B1D2A3E4A000B6834 /* LaunchScreen.storyboard */; };
 		3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0D81D6B39C7005A77A7 /* Taxi.swift */; };
-		3C51D0DC1D6B3AE3005A77A7 /* TaxiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0DB1D6B3AE3005A77A7 /* TaxiService.swift */; };
 		3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */; };
 		3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */; };
 		3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */; };
 		3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E41D6B5097005A77A7 /* MaterialView.swift */; };
-		3C51D0E71D6B50CA005A77A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E61D6B50CA005A77A7 /* Constants.swift */; };
 		3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */; };
 		4A4C38B439ECCA5293887B78 /* Pods_zaporozhye_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +40,6 @@
 		3C0F84031D69D6490035E3B6 /* zaporozhye-app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zaporozhye-app-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C0F84041D69D64A0035E3B6 /* FZAccordionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FZAccordionTableView.h; path = FZAccordionTableView/FZAccordionTableView.h; sourceTree = "<group>"; };
 		3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FZAccordionTableView.m; path = FZAccordionTableView/FZAccordionTableView.m; sourceTree = "<group>"; };
-		3C1421031D43599200D87096 /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		3C48674F1D2A3E4A000B6834 /* zaporozhye-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zaporozhye-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4867521D2A3E4A000B6834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C4867541D2A3E4A000B6834 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -52,12 +48,10 @@
 		3C48675C1D2A3E4A000B6834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C48675E1D2A3E4A000B6834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C51D0D81D6B39C7005A77A7 /* Taxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
-		3C51D0DB1D6B3AE3005A77A7 /* TaxiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiService.swift; sourceTree = "<group>"; };
 		3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiDatabase.swift; sourceTree = "<group>"; };
 		3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiCell.swift; sourceTree = "<group>"; };
 		3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxiCell.xib; sourceTree = "<group>"; };
 		3C51D0E41D6B5097005A77A7 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
-		3C51D0E61D6B50CA005A77A7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zaporozhye_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +152,6 @@
 		3C4867511D2A3E4A000B6834 /* zaporozhye-app */ = {
 			isa = PBXGroup;
 			children = (
-				3C51D0DA1D6B3AD0005A77A7 /* Util */,
 				3C39F63C1D422D4C00B13D73 /* Model */,
 				3C39F63D1D422D5100B13D73 /* View */,
 				3C39F63E1D422D5700B13D73 /* Controller */,
@@ -169,16 +162,6 @@
 				3C48675E1D2A3E4A000B6834 /* Info.plist */,
 			);
 			path = "zaporozhye-app";
-			sourceTree = "<group>";
-		};
-		3C51D0DA1D6B3AD0005A77A7 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				3C1421031D43599200D87096 /* WeatherForecast.swift */,
-				3C51D0DB1D6B3AE3005A77A7 /* TaxiService.swift */,
-				3C51D0E61D6B50CA005A77A7 /* Constants.swift */,
-			);
-			name = Util;
 			sourceTree = "<group>";
 		};
 		3C51D0DF1D6B4C06005A77A7 /* TaxiCell */ = {
@@ -332,15 +315,12 @@
 				3C0678091D42819F0046F6A2 /* Day.swift in Sources */,
 				3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */,
 				3C0F84001D69D5EE0035E3B6 /* AccordionHeaderView.swift in Sources */,
-				3C51D0E71D6B50CA005A77A7 /* Constants.swift in Sources */,
 				3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */,
 				3C0210EC1D2C1C2C00989062 /* MoreVC.swift in Sources */,
-				3C51D0DC1D6B3AE3005A77A7 /* TaxiService.swift in Sources */,
 				3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */,
 				3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */,
 				3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */,
 				3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */,
-				3C1421041D43599200D87096 /* WeatherForecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
