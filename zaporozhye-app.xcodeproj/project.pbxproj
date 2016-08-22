@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C0210EC1D2C1C2C00989062 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0210EB1D2C1C2C00989062 /* MoreVC.swift */; };
+		3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0678021D4256E90046F6A2 /* WeatherVC.swift */; };
+		3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0678061D4280DF0046F6A2 /* WeatherCell.swift */; };
+		3C0678091D42819F0046F6A2 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0678081D42819F0046F6A2 /* Day.swift */; };
+		3C0F84001D69D5EE0035E3B6 /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F83FC1D69D5EE0035E3B6 /* AccordionHeaderView.swift */; };
+		3C0F84011D69D5EE0035E3B6 /* AccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0F83FD1D69D5EE0035E3B6 /* AccordionHeaderView.xib */; };
+		3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F83FF1D69D5EE0035E3B6 /* TaxiVC.swift */; };
+		3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */; };
+		3C1421041D43599200D87096 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1421031D43599200D87096 /* WeatherForecast.swift */; };
+		3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4867521D2A3E4A000B6834 /* AppDelegate.swift */; };
+		3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4867541D2A3E4A000B6834 /* MainVC.swift */; };
+		3C4867581D2A3E4A000B6834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867561D2A3E4A000B6834 /* Main.storyboard */; };
+		3C48675A1D2A3E4A000B6834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867591D2A3E4A000B6834 /* Assets.xcassets */; };
+		3C48675D1D2A3E4A000B6834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C48675B1D2A3E4A000B6834 /* LaunchScreen.storyboard */; };
+		3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0D81D6B39C7005A77A7 /* Taxi.swift */; };
+		3C51D0DC1D6B3AE3005A77A7 /* TaxiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0DB1D6B3AE3005A77A7 /* TaxiService.swift */; };
+		3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */; };
+		3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */; };
+		3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */; };
+		3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E41D6B5097005A77A7 /* MaterialView.swift */; };
+		3C51D0E71D6B50CA005A77A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E61D6B50CA005A77A7 /* Constants.swift */; };
+		3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */; };
+		4A4C38B439ECCA5293887B78 /* Pods_zaporozhye_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C0210EB1D2C1C2C00989062 /* MoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreVC.swift; path = ../MoreVC.swift; sourceTree = "<group>"; };
+		3C0678021D4256E90046F6A2 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
+		3C0678061D4280DF0046F6A2 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		3C0678081D42819F0046F6A2 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		3C0F83FC1D69D5EE0035E3B6 /* AccordionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
+		3C0F83FD1D69D5EE0035E3B6 /* AccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccordionHeaderView.xib; sourceTree = "<group>"; };
+		3C0F83FF1D69D5EE0035E3B6 /* TaxiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiVC.swift; sourceTree = "<group>"; };
+		3C0F84031D69D6490035E3B6 /* zaporozhye-app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zaporozhye-app-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C0F84041D69D64A0035E3B6 /* FZAccordionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FZAccordionTableView.h; path = FZAccordionTableView/FZAccordionTableView.h; sourceTree = "<group>"; };
+		3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FZAccordionTableView.m; path = FZAccordionTableView/FZAccordionTableView.m; sourceTree = "<group>"; };
+		3C1421031D43599200D87096 /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
+		3C48674F1D2A3E4A000B6834 /* zaporozhye-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zaporozhye-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4867521D2A3E4A000B6834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C4867541D2A3E4A000B6834 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		3C4867571D2A3E4A000B6834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C4867591D2A3E4A000B6834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C48675C1D2A3E4A000B6834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C48675E1D2A3E4A000B6834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C51D0D81D6B39C7005A77A7 /* Taxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
+		3C51D0DB1D6B3AE3005A77A7 /* TaxiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiService.swift; sourceTree = "<group>"; };
+		3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiDatabase.swift; sourceTree = "<group>"; };
+		3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiCell.swift; sourceTree = "<group>"; };
+		3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxiCell.xib; sourceTree = "<group>"; };
+		3C51D0E41D6B5097005A77A7 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		3C51D0E61D6B50CA005A77A7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zaporozhye_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.debug.xcconfig"; sourceTree = "<group>"; };
+		FCCD1837B40D17EEE4D4C7C6 /* Pods-zaporozhye-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C48674C1D2A3E4A000B6834 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4C38B439ECCA5293887B78 /* Pods_zaporozhye_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23F8A405B45AB02ECE3A6C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */,
+				FCCD1837B40D17EEE4D4C7C6 /* Pods-zaporozhye-app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C0F84071D69D65C0035E3B6 /* FZAccordionTableView */ = {
+			isa = PBXGroup;
+			children = (
+				3C0F84041D69D64A0035E3B6 /* FZAccordionTableView.h */,
+				3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */,
+			);
+			name = FZAccordionTableView;
+			sourceTree = "<group>";
+		};
+		3C0F84081D69D68A0035E3B6 /* AccordionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				3C0F83FC1D69D5EE0035E3B6 /* AccordionHeaderView.swift */,
+				3C0F83FD1D69D5EE0035E3B6 /* AccordionHeaderView.xib */,
+			);
+			name = AccordionHeaderView;
+			sourceTree = "<group>";
+		};
+		3C39F63C1D422D4C00B13D73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C0678081D42819F0046F6A2 /* Day.swift */,
+				3C51D0D81D6B39C7005A77A7 /* Taxi.swift */,
+				3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3C39F63D1D422D5100B13D73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C51D0DF1D6B4C06005A77A7 /* TaxiCell */,
+				3C0F84081D69D68A0035E3B6 /* AccordionHeaderView */,
+				3C0678061D4280DF0046F6A2 /* WeatherCell.swift */,
+				3C0F84071D69D65C0035E3B6 /* FZAccordionTableView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3C39F63E1D422D5700B13D73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C0F83FF1D69D5EE0035E3B6 /* TaxiVC.swift */,
+				3C0210EB1D2C1C2C00989062 /* MoreVC.swift */,
+				3C4867541D2A3E4A000B6834 /* MainVC.swift */,
+				3C0678021D4256E90046F6A2 /* WeatherVC.swift */,
+				3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3C4867461D2A3E4A000B6834 = {
+			isa = PBXGroup;
+			children = (
+				3C4867511D2A3E4A000B6834 /* zaporozhye-app */,
+				3C4867501D2A3E4A000B6834 /* Products */,
+				23F8A405B45AB02ECE3A6C2C /* Pods */,
+				9F9AE0B3D3F2A3CDF3A38A68 /* Frameworks */,
+				3C0F84031D69D6490035E3B6 /* zaporozhye-app-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		3C4867501D2A3E4A000B6834 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C48674F1D2A3E4A000B6834 /* zaporozhye-app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C4867511D2A3E4A000B6834 /* zaporozhye-app */ = {
+			isa = PBXGroup;
+			children = (
+				3C51D0DA1D6B3AD0005A77A7 /* Util */,
+				3C39F63C1D422D4C00B13D73 /* Model */,
+				3C39F63D1D422D5100B13D73 /* View */,
+				3C39F63E1D422D5700B13D73 /* Controller */,
+				3C4867521D2A3E4A000B6834 /* AppDelegate.swift */,
+				3C4867561D2A3E4A000B6834 /* Main.storyboard */,
+				3C4867591D2A3E4A000B6834 /* Assets.xcassets */,
+				3C48675B1D2A3E4A000B6834 /* LaunchScreen.storyboard */,
+				3C48675E1D2A3E4A000B6834 /* Info.plist */,
+			);
+			path = "zaporozhye-app";
+			sourceTree = "<group>";
+		};
+		3C51D0DA1D6B3AD0005A77A7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3C1421031D43599200D87096 /* WeatherForecast.swift */,
+				3C51D0DB1D6B3AE3005A77A7 /* TaxiService.swift */,
+				3C51D0E61D6B50CA005A77A7 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		3C51D0DF1D6B4C06005A77A7 /* TaxiCell */ = {
+			isa = PBXGroup;
+			children = (
+				3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */,
+				3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */,
+				3C51D0E41D6B5097005A77A7 /* MaterialView.swift */,
+			);
+			name = TaxiCell;
+			sourceTree = "<group>";
+		};
+		9F9AE0B3D3F2A3CDF3A38A68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C48674E1D2A3E4A000B6834 /* zaporozhye-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C4867611D2A3E4A000B6834 /* Build configuration list for PBXNativeTarget "zaporozhye-app" */;
+			buildPhases = (
+				DAC055AB93F7257309F33556 /* [CP] Check Pods Manifest.lock */,
+				3C48674B1D2A3E4A000B6834 /* Sources */,
+				3C48674C1D2A3E4A000B6834 /* Frameworks */,
+				3C48674D1D2A3E4A000B6834 /* Resources */,
+				611EDDD06594A3634A563C78 /* [CP] Embed Pods Frameworks */,
+				DD7355EB93CA2BFF50F9E7D4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "zaporozhye-app";
+			productName = "zaporozhye-app";
+			productReference = 3C48674F1D2A3E4A000B6834 /* zaporozhye-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C4867471D2A3E4A000B6834 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Timofey Dolenko";
+				TargetAttributes = {
+					3C48674E1D2A3E4A000B6834 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 3C48674A1D2A3E4A000B6834 /* Build configuration list for PBXProject "zaporozhye-app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C4867461D2A3E4A000B6834;
+			productRefGroup = 3C4867501D2A3E4A000B6834 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C48674E1D2A3E4A000B6834 /* zaporozhye-app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C48674D1D2A3E4A000B6834 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C48675D1D2A3E4A000B6834 /* LaunchScreen.storyboard in Resources */,
+				3C48675A1D2A3E4A000B6834 /* Assets.xcassets in Resources */,
+				3C0F84011D69D5EE0035E3B6 /* AccordionHeaderView.xib in Resources */,
+				3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */,
+				3C4867581D2A3E4A000B6834 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		611EDDD06594A3634A563C78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAC055AB93F7257309F33556 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD7355EB93CA2BFF50F9E7D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C48674B1D2A3E4A000B6834 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */,
+				3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */,
+				3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */,
+				3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */,
+				3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */,
+				3C0678091D42819F0046F6A2 /* Day.swift in Sources */,
+				3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */,
+				3C0F84001D69D5EE0035E3B6 /* AccordionHeaderView.swift in Sources */,
+				3C51D0E71D6B50CA005A77A7 /* Constants.swift in Sources */,
+				3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */,
+				3C0210EC1D2C1C2C00989062 /* MoreVC.swift in Sources */,
+				3C51D0DC1D6B3AE3005A77A7 /* TaxiService.swift in Sources */,
+				3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */,
+				3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */,
+				3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */,
+				3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */,
+				3C1421041D43599200D87096 /* WeatherForecast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C4867561D2A3E4A000B6834 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C4867571D2A3E4A000B6834 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C48675B1D2A3E4A000B6834 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C48675C1D2A3E4A000B6834 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C48675F1D2A3E4A000B6834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C4867601D2A3E4A000B6834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C4867621D2A3E4A000B6834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "zaporozhye-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sispo.zaporozhye-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "zaporozhye-app-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3C4867631D2A3E4A000B6834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCCD1837B40D17EEE4D4C7C6 /* Pods-zaporozhye-app.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "zaporozhye-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sispo.zaporozhye-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "zaporozhye-app-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C48674A1D2A3E4A000B6834 /* Build configuration list for PBXProject "zaporozhye-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C48675F1D2A3E4A000B6834 /* Debug */,
+				3C4867601D2A3E4A000B6834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C4867611D2A3E4A000B6834 /* Build configuration list for PBXNativeTarget "zaporozhye-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C4867621D2A3E4A000B6834 /* Debug */,
+				3C4867631D2A3E4A000B6834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C4867471D2A3E4A000B6834 /* Project object */;
+}
