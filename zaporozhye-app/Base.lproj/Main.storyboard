@@ -17,11 +17,12 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zap" translatesAutoresizingMaskIntoConstraints="NO" id="A2k-Up-DoC"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OMV-px-ugq">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OMV-px-ugq">
+                                <frame key="frameInset" minX="6" minY="20" width="296" height="281"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-5w-KgH">
                                         <subviews>
@@ -145,7 +146,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="8cm-qi-pIv" kind="show" id="pdN-Pg-YVi"/>
+                                    <segue destination="LCx-r4-H9G" kind="show" identifier="MenuVC" id="5LW-2T-hSg"/>
                                 </connections>
                             </button>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud_download" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-E3-cUz">
@@ -203,7 +204,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WFs-Ah-qJh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bza-i4-yQD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-ub-sh9"/>
@@ -240,11 +241,11 @@
                                                         <variation key="heightClass=regular-widthClass=regular" constant="60"/>
                                                     </constraint>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="29"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="29"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="49"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="49"/>
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNF-ob-xHj">
@@ -370,7 +371,7 @@
                                                                 <variation key="heightClass=compact-widthClass=compact" constant="40"/>
                                                             </constraint>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="29"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="29"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
@@ -394,7 +395,7 @@
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                                         </variation>
                                                     </label>
                                                 </subviews>
@@ -416,7 +417,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.5 m/s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfd-Z5-2kw">
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -445,7 +446,7 @@
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="RBx-D5-iO6"/>
                                                                     <constraint firstAttribute="height" constant="20" id="ZAl-au-jEH"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
@@ -478,7 +479,7 @@
                                                                     <constraint firstAttribute="width" constant="50" id="Wbm-aa-tBh"/>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="jDc-CR-YlF"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
@@ -532,7 +533,7 @@
                                                                                 <constraint firstAttribute="width" constant="50" id="Xo5-bv-DF7"/>
                                                                                 <constraint firstAttribute="height" constant="22" id="fHh-J5-2MJ"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="default">
@@ -565,7 +566,7 @@
                                                                                 <constraint firstAttribute="width" constant="50" id="QBh-pe-Y3h"/>
                                                                                 <constraint firstAttribute="height" constant="20" id="zeM-EN-B2s"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                             <variation key="default">
@@ -709,18 +710,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fb-QU-Sbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="-875"/>
+            <point key="canvasLocation" x="1585" y="-785"/>
         </scene>
-        <!--MoreVC-->
+        <!--AboutVC-->
         <scene sceneID="wpH-YB-O1j">
             <objects>
-                <viewController id="8cm-qi-pIv" customClass="MoreVC" customModule="zaporozhye_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8cm-qi-pIv" customClass="AboutVC" customModule="zaporozhye_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qPE-Ie-7bM"/>
                         <viewControllerLayoutGuide type="bottom" id="6nc-79-iTA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I3f-TH-qX3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zap2" translatesAutoresizingMaskIntoConstraints="NO" id="3fT-Kj-YCc">
@@ -781,8 +782,8 @@
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evt-D3-Kwd">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3Ur-Y8-XSA"/>
-                                    <constraint firstAttribute="width" constant="30" id="Fri-eq-DpH"/>
+                                    <constraint firstAttribute="height" constant="20" id="3Ur-Y8-XSA"/>
+                                    <constraint firstAttribute="width" constant="20" id="Fri-eq-DpH"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
@@ -792,37 +793,7 @@
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iQj-Nz-xGO">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POPULATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="iSW-0O-gKZ">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="2fe-mI-zlT"/>
-                                            <constraint firstAttribute="width" constant="152" id="tKx-66-C75"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="2fe-mI-zlT"/>
-                                                <exclude reference="tKx-66-C75"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-q8-77C">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="J5V-Qi-gcV"/>
-                                            <constraint firstAttribute="width" constant="152" id="beB-bu-QPb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="J5V-Qi-gcV"/>
-                                                <exclude reference="beB-bu-QPb"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRIEF HISTORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zhg-FK-leB">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRIEF HISTORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="zhg-FK-leB">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="152" id="DxV-Qs-0rS">
                                                 <variation key="widthClass=regular" constant="170"/>
@@ -830,8 +801,9 @@
                                             <constraint firstAttribute="height" constant="20" id="hiy-tQ-sXM"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="kaL-go-PUJ"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="l5f-86-yYt"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="rXz-bQ-zQ5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -847,8 +819,11 @@
                                                 <exclude reference="kaL-go-PUJ"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="rto-hL-FID">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="rto-hL-FID">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="152" id="IRc-Fo-HYX"/>
                                             <constraint firstAttribute="height" constant="380" id="Sne-2m-esF"/>
@@ -860,9 +835,8 @@ Zaporizhia was founded in 952, but had different names and got the city status o
 
 Before the World War II the city was highly developed industrial center. In 1941-1943 Zaporizhia was occupied by German Army. Reconstruction of the city continued until 1960s.
 
-Zaporozhye gained independence with all the rest of Ukraine in 1991.
-</string>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="17"/>
+Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -872,15 +846,19 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                                                 <exclude reference="acn-pu-9zb"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="35"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOWADAYS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Dh-vj-VJ4">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOWADAYS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4Dh-vj-VJ4">
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="6v0-X4-I0W"/>
                                             <constraint firstAttribute="width" constant="152" id="9PZ-CB-N67"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="F8m-ba-GLZ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="l6u-Jo-7OI"/>
                                             <constraint firstAttribute="height" constant="25" id="mdj-vw-jCi"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -891,14 +869,17 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                                                 <exclude reference="mdj-vw-jCi"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="igi-Nu-oDr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="igi-Nu-oDr">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="152" id="SlW-MS-RMU"/>
                                             <constraint firstAttribute="height" constant="17" id="c8O-bc-dDR"/>
                                         </constraints>
                                         <string key="text">Today Zaporozhye is one of the largest cities of Ukraine, important industrial and economical center, river port and railway hub.</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="15"/>
                                         <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -907,20 +888,24 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                                                 <exclude reference="c8O-bc-dDR"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="35"/>
+                                        </variation>
                                     </label>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZG0-f1-AxN" firstAttribute="centerX" secondItem="I3f-TH-qX3" secondAttribute="centerX" id="2T3-zO-cJR"/>
+                            <constraint firstItem="evt-D3-Kwd" firstAttribute="centerY" secondItem="ZG0-f1-AxN" secondAttribute="centerY" id="2af-PR-QCq"/>
                             <constraint firstItem="evt-D3-Kwd" firstAttribute="top" secondItem="qPE-Ie-7bM" secondAttribute="bottom" constant="8" id="2hA-gA-JFG"/>
                             <constraint firstAttribute="trailing" secondItem="3fT-Kj-YCc" secondAttribute="trailing" id="34t-xi-75U"/>
                             <constraint firstItem="ZG0-f1-AxN" firstAttribute="centerY" secondItem="3fT-Kj-YCc" secondAttribute="centerY" id="8uN-La-bzz"/>
                             <constraint firstItem="ZG0-f1-AxN" firstAttribute="top" secondItem="qPE-Ie-7bM" secondAttribute="bottom" constant="25" id="9wA-vp-nct"/>
                             <constraint firstItem="ZG0-f1-AxN" firstAttribute="top" secondItem="qPE-Ie-7bM" secondAttribute="bottom" constant="40" id="AIO-dj-nXD"/>
                             <constraint firstItem="ZG0-f1-AxN" firstAttribute="centerY" secondItem="3fT-Kj-YCc" secondAttribute="centerY" id="G0F-5F-HLQ"/>
-                            <constraint firstItem="evt-D3-Kwd" firstAttribute="top" secondItem="qPE-Ie-7bM" secondAttribute="bottom" constant="20" id="H48-8l-ubL"/>
                             <constraint firstItem="iQj-Nz-xGO" firstAttribute="top" secondItem="3fT-Kj-YCc" secondAttribute="bottom" constant="8" id="IV5-Ya-797"/>
                             <constraint firstItem="3fT-Kj-YCc" firstAttribute="top" secondItem="I3f-TH-qX3" secondAttribute="top" id="PNE-oK-Ceh"/>
                             <constraint firstItem="evt-D3-Kwd" firstAttribute="top" secondItem="qPE-Ie-7bM" secondAttribute="bottom" id="Tey-JZ-Qgr"/>
@@ -962,7 +947,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4P5-HN-8cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="126"/>
+            <point key="canvasLocation" x="2461" y="72"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="HGF-Lw-2sV">
@@ -973,46 +958,67 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                         <viewControllerLayoutGuide type="bottom" id="eJB-tN-dpT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4RD-Vs-AV8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhE-Ea-Yf0">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaporozhia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXv-o1-1ZY">
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.3520425955" blue="0.02196717686" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-UF-yjL">
                                 <constraints>
-                                    <constraint firstItem="EXv-o1-1ZY" firstAttribute="centerX" secondItem="BhE-Ea-Yf0" secondAttribute="centerX" id="UTT-9k-jkE"/>
-                                    <constraint firstItem="EXv-o1-1ZY" firstAttribute="centerY" secondItem="BhE-Ea-Yf0" secondAttribute="centerY" id="Xvq-Fy-UuA"/>
-                                    <constraint firstAttribute="height" constant="50" id="ggx-Fk-U2l"/>
+                                    <constraint firstAttribute="height" constant="50" id="vDL-cn-JMB"/>
                                 </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dI7-X1-ylc">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaporozhia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXv-o1-1ZY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="rhH-yX-4HH"/>
+                                    <constraint firstAttribute="height" constant="25" id="uwb-Om-qeX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dI7-X1-ylc">
+                                <color key="backgroundColor" red="0.058823529411764705" green="0.12549019607843137" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cg-X4-BPg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="epB-od-xy0"/>
+                                    <constraint firstAttribute="width" constant="20" id="hsd-hJ-sT3"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="8cm-qi-pIv" eventType="touchUpInside" id="3fR-mT-U1G"/>
+                                    <action selector="backBtnPressed:" destination="LCx-r4-H9G" eventType="touchUpInside" id="eBp-I7-bfS"/>
+                                    <action selector="backBtnPressed:" destination="uqk-fT-joC" eventType="touchUpInside" id="mXE-i9-OS0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="BhE-Ea-Yf0" secondAttribute="trailing" id="6Ge-rc-qYa"/>
+                            <constraint firstItem="EXv-o1-1ZY" firstAttribute="centerY" secondItem="2cg-X4-BPg" secondAttribute="centerY" id="0In-G8-zV9"/>
+                            <constraint firstItem="bgh-UF-yjL" firstAttribute="leading" secondItem="4RD-Vs-AV8" secondAttribute="leading" id="5wX-yc-7W6"/>
+                            <constraint firstItem="dI7-X1-ylc" firstAttribute="top" secondItem="bgh-UF-yjL" secondAttribute="bottom" id="60J-E7-o8w"/>
+                            <constraint firstItem="bgh-UF-yjL" firstAttribute="top" secondItem="4RD-Vs-AV8" secondAttribute="top" id="ET3-34-X4G"/>
+                            <constraint firstItem="2cg-X4-BPg" firstAttribute="leading" secondItem="4RD-Vs-AV8" secondAttribute="leadingMargin" id="FvI-cb-EfR"/>
+                            <constraint firstItem="dI7-X1-ylc" firstAttribute="leading" secondItem="4RD-Vs-AV8" secondAttribute="leading" id="LM2-sK-dnh"/>
                             <constraint firstItem="dI7-X1-ylc" firstAttribute="leading" secondItem="4RD-Vs-AV8" secondAttribute="leading" id="N8b-bI-THp"/>
                             <constraint firstAttribute="trailing" secondItem="dI7-X1-ylc" secondAttribute="trailing" id="NPq-8k-gDQ"/>
                             <constraint firstItem="eJB-tN-dpT" firstAttribute="top" secondItem="dI7-X1-ylc" secondAttribute="bottom" id="O9a-iJ-T6K"/>
-                            <constraint firstItem="BhE-Ea-Yf0" firstAttribute="leading" secondItem="4RD-Vs-AV8" secondAttribute="leading" id="hxl-fI-maJ"/>
-                            <constraint firstItem="BhE-Ea-Yf0" firstAttribute="top" secondItem="4RD-Vs-AV8" secondAttribute="top" id="qlR-sc-5CM"/>
-                            <constraint firstItem="dI7-X1-ylc" firstAttribute="top" secondItem="BhE-Ea-Yf0" secondAttribute="bottom" id="zzA-3c-Wcr"/>
+                            <constraint firstItem="dI7-X1-ylc" firstAttribute="top" secondItem="EXv-o1-1ZY" secondAttribute="bottom" constant="5" id="Zge-bw-I5I"/>
+                            <constraint firstItem="EXv-o1-1ZY" firstAttribute="centerX" secondItem="4RD-Vs-AV8" secondAttribute="centerX" id="gXG-e1-lD8"/>
+                            <constraint firstAttribute="trailing" secondItem="dI7-X1-ylc" secondAttribute="trailing" id="kL6-Ca-fPM"/>
+                            <constraint firstAttribute="trailing" secondItem="bgh-UF-yjL" secondAttribute="trailing" id="lYR-eA-FTZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="dI7-X1-ylc" id="mIr-3R-mIt"/>
+                        <segue destination="8cm-qi-pIv" kind="show" identifier="AboutVC" id="4py-iP-caY"/>
+                        <segue destination="9tN-Az-iDQ" kind="show" identifier="TaxiVC" id="DZS-sq-ORt"/>
+                        <segue destination="uqk-fT-joC" kind="show" identifier="WeatherVC" id="agj-mj-ak2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3L-u6-bGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="832"/>
+            <point key="canvasLocation" x="1585" y="119"/>
         </scene>
         <!--TaxiVC-->
         <scene sceneID="K3D-qE-Amr">
@@ -1023,42 +1029,62 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                         <viewControllerLayoutGuide type="bottom" id="LnW-fS-EcQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7zI-Vu-5xR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3A-iN-dCT">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-dh-ajt">
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.3520425955" blue="0.02196717686" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="y8U-dh-ajt" firstAttribute="centerY" secondItem="E3A-iN-dCT" secondAttribute="centerY" id="5Vr-Db-acN"/>
-                                    <constraint firstAttribute="height" constant="50" id="Ftz-O7-YuV"/>
-                                    <constraint firstItem="y8U-dh-ajt" firstAttribute="centerX" secondItem="E3A-iN-dCT" secondAttribute="centerX" id="gau-bG-lDz"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mOl-fg-nNV" customClass="FZAccordionTableView">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9tN-Az-iDQ" id="lSU-c5-LOp"/>
                                     <outlet property="delegate" destination="9tN-Az-iDQ" id="Q6E-6q-MNn"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-hN-3bK">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="LB9-Kl-Oss"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="rZs-Fl-e9F"/>
+                                    <constraint firstAttribute="height" constant="50" id="xNQ-PS-cbp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-dh-ajt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="3l0-wr-PQI"/>
+                                    <constraint firstAttribute="height" constant="25" id="R5A-fo-nHJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBR-Fk-JdR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="DVQ-Hb-hw1"/>
+                                    <constraint firstAttribute="height" constant="20" id="QNo-Z7-Xnv"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="uqk-fT-joC" eventType="touchUpInside" id="0S1-YX-rTD"/>
+                                    <action selector="backBtnPressed:" destination="8cm-qi-pIv" eventType="touchUpInside" id="L7h-dP-W3l"/>
+                                    <action selector="backBtnPressed:" destination="9tN-Az-iDQ" eventType="touchUpInside" id="rRR-Rw-htn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="E3A-iN-dCT" firstAttribute="top" secondItem="7zI-Vu-5xR" secondAttribute="top" id="BZH-HE-48M"/>
-                            <constraint firstAttribute="trailing" secondItem="E3A-iN-dCT" secondAttribute="trailing" id="NuE-eL-HKD"/>
+                            <constraint firstItem="y8U-dh-ajt" firstAttribute="centerY" secondItem="XBR-Fk-JdR" secondAttribute="centerY" id="0x6-Ag-APF"/>
+                            <constraint firstItem="mOl-fg-nNV" firstAttribute="leading" secondItem="7zI-Vu-5xR" secondAttribute="leading" id="55f-ei-EzN"/>
+                            <constraint firstItem="mOl-fg-nNV" firstAttribute="top" secondItem="5PF-hN-3bK" secondAttribute="bottom" id="CaR-4t-Lgd"/>
+                            <constraint firstItem="LnW-fS-EcQ" firstAttribute="top" secondItem="mOl-fg-nNV" secondAttribute="bottom" id="DOX-Yj-Qey"/>
+                            <constraint firstItem="mOl-fg-nNV" firstAttribute="top" secondItem="y8U-dh-ajt" secondAttribute="bottom" constant="5" id="L2i-cW-o5m"/>
                             <constraint firstAttribute="trailing" secondItem="mOl-fg-nNV" secondAttribute="trailing" id="ORI-1H-v8B"/>
+                            <constraint firstItem="y8U-dh-ajt" firstAttribute="centerX" secondItem="7zI-Vu-5xR" secondAttribute="centerX" id="Sa3-dK-qPC"/>
                             <constraint firstItem="mOl-fg-nNV" firstAttribute="leading" secondItem="7zI-Vu-5xR" secondAttribute="leading" id="UWh-Vu-wxn"/>
-                            <constraint firstItem="mOl-fg-nNV" firstAttribute="top" secondItem="E3A-iN-dCT" secondAttribute="bottom" id="koB-O1-gAk"/>
-                            <constraint firstItem="E3A-iN-dCT" firstAttribute="leading" secondItem="7zI-Vu-5xR" secondAttribute="leading" id="tHU-Yr-UMo"/>
+                            <constraint firstItem="5PF-hN-3bK" firstAttribute="top" secondItem="7zI-Vu-5xR" secondAttribute="top" id="Uap-ZV-YwX"/>
+                            <constraint firstAttribute="trailing" secondItem="5PF-hN-3bK" secondAttribute="trailing" id="cCW-L0-fVC"/>
+                            <constraint firstItem="XBR-Fk-JdR" firstAttribute="leading" secondItem="7zI-Vu-5xR" secondAttribute="leadingMargin" id="pzu-e8-VTv"/>
+                            <constraint firstAttribute="trailing" secondItem="mOl-fg-nNV" secondAttribute="trailing" id="u7i-BF-vwc"/>
                             <constraint firstItem="LnW-fS-EcQ" firstAttribute="top" secondItem="mOl-fg-nNV" secondAttribute="bottom" id="w2O-Ce-sTL"/>
+                            <constraint firstItem="5PF-hN-3bK" firstAttribute="leading" secondItem="7zI-Vu-5xR" secondAttribute="leading" id="y3j-ui-w12"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1066,23 +1092,8 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPL-OP-d5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d42-x8-NWv">
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVo-Jl-7zg">
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="0.3520425955" blue="0.02196717686" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="dVo-Jl-7zg" firstAttribute="centerY" secondItem="d42-x8-NWv" secondAttribute="centerY" id="542-GE-BfK"/>
-                        <constraint firstAttribute="height" constant="50" id="gI6-nl-vp2"/>
-                        <constraint firstItem="dVo-Jl-7zg" firstAttribute="centerX" secondItem="d42-x8-NWv" secondAttribute="centerX" id="kss-Ja-jwh"/>
-                    </constraints>
-                </view>
             </objects>
-            <point key="canvasLocation" x="1940" y="832"/>
+            <point key="canvasLocation" x="2532" y="862"/>
         </scene>
     </scenes>
     <resources>
@@ -1091,6 +1102,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
         <image name="cloud_rain" width="512" height="512"/>
         <image name="cloud_sun" width="512" height="512"/>
         <image name="compass" width="566" height="566"/>
+        <image name="header" width="375" height="50"/>
         <image name="rain_drop" width="512" height="512"/>
         <image name="refresh" width="64" height="64"/>
         <image name="thermometer" width="512" height="512"/>
@@ -1099,4 +1111,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.
         <image name="zap" width="1050" height="740"/>
         <image name="zap2" width="640" height="480"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FHy-dL-42I"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -24,6 +24,9 @@ class TaxiVC: UIViewController {
         taxiArray = TaxiService.getArrayOfTaxi(database: TaxiDatabase.TaxiData)
     }
     
+    @IBAction func backBtnPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 // MARK: - Extra Overrides - 
@@ -84,6 +87,7 @@ extension TaxiVC : UITableViewDelegate, UITableViewDataSource {
             header.taxiNumberLbl.text = taxiArray[section].phones[0]
             
             if taxiArray[section].phones.count <= 1 {
+                print("Removed moreBtn in section:\(section)")
                 header.moreLbl.isHidden = true
                 header.moreImg.isHidden = true
             }
