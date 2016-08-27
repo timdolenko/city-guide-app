@@ -14,25 +14,22 @@ class MenuData {
         "cell0" : ["title":"Places to visit",
                    "imgPath":"placesToVisit"
         ],
-        "cell1" : ["title":"Cafes/Bars",
-                   "imgPath":"cafesBars"
-        ],
-        "cell2" : ["title":"",
+        "cell1" : ["title":"",
                    "imgPath":"taxi"
         ],
-        "cell3" : ["title":"Order Food",
+        "cell2" : ["title":"Order Food",
                    "imgPath":"orderFood"
         ],
-        "cell4" : ["title":"Hotels",
+        "cell3" : ["title":"Hotels",
                    "imgPath":"hotels"
         ],
-        "cell5" : ["title":"Shopping Malls",
+        "cell4" : ["title":"Shopping Malls",
                    "imgPath":"shoppingMalls"
         ],
-        "cell6" : ["title":"About City",
+        "cell5" : ["title":"About City",
                    "imgPath":"aboutCity"
         ],
-        "cell7" : ["title":"Weather",
+        "cell6" : ["title":"Weather",
                    "imgPath":"weather"
         ]
     

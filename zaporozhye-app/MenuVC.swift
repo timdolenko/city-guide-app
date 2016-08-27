@@ -19,21 +19,19 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        case 2:
+        case 0:
+            performSegue(withIdentifier: SEGUE_PLACESMENUVC, sender: nil)
+        case 1:
             performSegue(withIdentifier: SEGUE_TAXIVC, sender: nil)
-        case 6:
+        case 5:
             performSegue(withIdentifier: SEGUE_ABOUTVC, sender: nil)
-        case 7:
+        case 6:
             performSegue(withIdentifier: SEGUE_WEATHERVC, sender: nil)
         default:
-            print("Error occured when selected row")
+            print("SISPO: Error occured when selected row")
         }
         
     }
@@ -61,7 +59,8 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        let height = (view.frame.height - 50) / CGFloat(MenuData.MenuDict.count)
+        return height
     }
 
     @IBAction func backBtnPressed(_ sender: AnyObject) {

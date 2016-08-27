@@ -15,6 +15,9 @@
 		3C0F84011D69D5EE0035E3B6 /* AccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0F83FD1D69D5EE0035E3B6 /* AccordionHeaderView.xib */; };
 		3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F83FF1D69D5EE0035E3B6 /* TaxiVC.swift */; };
 		3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */; };
+		3C41F6B91D6EE62400BBE2A1 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41F6B81D6EE62400BBE2A1 /* DataService.swift */; };
+		3C41F6BB1D6EE6C400BBE2A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C41F6BA1D6EE6C400BBE2A1 /* GoogleService-Info.plist */; };
+		3C41F6BD1D6EED9800BBE2A1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C41F6BC1D6EED9800BBE2A1 /* Place.swift */; };
 		3C4540A41D6C389A00409D4F /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540A21D6C389A00409D4F /* MenuCell.swift */; };
 		3C4540A51D6C389A00409D4F /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4540A31D6C389A00409D4F /* MenuCell.xib */; };
 		3C4540A71D6C3A3200409D4F /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540A61D6C3A3100409D4F /* MenuData.swift */; };
@@ -26,12 +29,20 @@
 		3C4867581D2A3E4A000B6834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867561D2A3E4A000B6834 /* Main.storyboard */; };
 		3C48675A1D2A3E4A000B6834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867591D2A3E4A000B6834 /* Assets.xcassets */; };
 		3C48675D1D2A3E4A000B6834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C48675B1D2A3E4A000B6834 /* LaunchScreen.storyboard */; };
+		3C4D97B11D6DB8420002B055 /* PlacesMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B01D6DB8420002B055 /* PlacesMenuVC.swift */; };
+		3C4D97B31D6DBC760002B055 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B21D6DBC760002B055 /* MaterialButton.swift */; };
+		3C4D97B51D6DC8650002B055 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B41D6DC8650002B055 /* PlacesVC.swift */; };
+		3C4D97B71D6DCFC40002B055 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */; };
+		3C4D97B91D6DE77B0002B055 /* PlacesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B81D6DE77B0002B055 /* PlacesDatabase.swift */; };
 		3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0D81D6B39C7005A77A7 /* Taxi.swift */; };
 		3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */; };
 		3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */; };
 		3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */; };
 		3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E41D6B5097005A77A7 /* MaterialView.swift */; };
 		3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */; };
+		3C6950E21D71BD62007BFCBA /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6950E11D71BD62007BFCBA /* PlaceVC.swift */; };
+		3C6950E71D71E260007BFCBA /* PlaceImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */; };
+		3CA79E501D720177003C894B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA79E4F1D720177003C894B /* RoundedView.swift */; };
 		4A4C38B439ECCA5293887B78 /* Pods_zaporozhye_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +57,9 @@
 		3C0F84031D69D6490035E3B6 /* zaporozhye-app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zaporozhye-app-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C0F84041D69D64A0035E3B6 /* FZAccordionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FZAccordionTableView.h; path = FZAccordionTableView/FZAccordionTableView.h; sourceTree = "<group>"; };
 		3C0F84051D69D64A0035E3B6 /* FZAccordionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FZAccordionTableView.m; path = FZAccordionTableView/FZAccordionTableView.m; sourceTree = "<group>"; };
+		3C41F6B81D6EE62400BBE2A1 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3C41F6BA1D6EE6C400BBE2A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C41F6BC1D6EED9800BBE2A1 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		3C4540A21D6C389A00409D4F /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		3C4540A31D6C389A00409D4F /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		3C4540A61D6C3A3100409D4F /* MenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
@@ -59,12 +73,20 @@
 		3C4867591D2A3E4A000B6834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C48675C1D2A3E4A000B6834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C48675E1D2A3E4A000B6834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C4D97B01D6DB8420002B055 /* PlacesMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesMenuVC.swift; sourceTree = "<group>"; };
+		3C4D97B21D6DBC760002B055 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		3C4D97B41D6DC8650002B055 /* PlacesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
+		3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		3C4D97B81D6DE77B0002B055 /* PlacesDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesDatabase.swift; sourceTree = "<group>"; };
 		3C51D0D81D6B39C7005A77A7 /* Taxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
 		3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiDatabase.swift; sourceTree = "<group>"; };
 		3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiCell.swift; sourceTree = "<group>"; };
 		3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxiCell.xib; sourceTree = "<group>"; };
 		3C51D0E41D6B5097005A77A7 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		3C6950E11D71BD62007BFCBA /* PlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
+		3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceImageCell.swift; sourceTree = "<group>"; };
+		3CA79E4F1D720177003C894B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zaporozhye_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCD1837B40D17EEE4D4C7C6 /* Pods-zaporozhye-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +138,8 @@
 				3C51D0D81D6B39C7005A77A7 /* Taxi.swift */,
 				3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */,
 				3C4540A61D6C3A3100409D4F /* MenuData.swift */,
+				3C4D97B81D6DE77B0002B055 /* PlacesDatabase.swift */,
+				3C41F6BC1D6EED9800BBE2A1 /* Place.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -124,10 +148,15 @@
 			isa = PBXGroup;
 			children = (
 				3C4540A11D6C387000409D4F /* MenuCell */,
+				3C51D0E41D6B5097005A77A7 /* MaterialView.swift */,
 				3C51D0DF1D6B4C06005A77A7 /* TaxiCell */,
 				3C0F84081D69D68A0035E3B6 /* AccordionHeaderView */,
 				3C0678061D4280DF0046F6A2 /* WeatherCell.swift */,
 				3C0F84071D69D65C0035E3B6 /* FZAccordionTableView */,
+				3C4D97B21D6DBC760002B055 /* MaterialButton.swift */,
+				3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */,
+				3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */,
+				3CA79E4F1D720177003C894B /* RoundedView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -140,6 +169,9 @@
 				3C4867541D2A3E4A000B6834 /* MainVC.swift */,
 				3C0678021D4256E90046F6A2 /* WeatherVC.swift */,
 				3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */,
+				3C4D97B01D6DB8420002B055 /* PlacesMenuVC.swift */,
+				3C4D97B41D6DC8650002B055 /* PlacesVC.swift */,
+				3C6950E11D71BD62007BFCBA /* PlaceVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -156,9 +188,10 @@
 		3C4540A91D6C3E8600409D4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3C4540AA1D6C3E9600409D4F /* Constants.swift */,
 				3C4540AB1D6C3E9600409D4F /* TaxiService.swift */,
+				3C4540AA1D6C3E9600409D4F /* Constants.swift */,
 				3C4540AC1D6C3E9600409D4F /* WeatherForecast.swift */,
+				3C41F6B81D6EE62400BBE2A1 /* DataService.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -185,12 +218,14 @@
 		3C4867511D2A3E4A000B6834 /* zaporozhye-app */ = {
 			isa = PBXGroup;
 			children = (
+				3C6950E51D71DAF3007BFCBA /* Services */,
 				3C4540A91D6C3E8600409D4F /* Utils */,
 				3C39F63C1D422D4C00B13D73 /* Model */,
 				3C39F63D1D422D5100B13D73 /* View */,
 				3C39F63E1D422D5700B13D73 /* Controller */,
 				3C4867521D2A3E4A000B6834 /* AppDelegate.swift */,
 				3C4867561D2A3E4A000B6834 /* Main.storyboard */,
+				3C41F6BA1D6EE6C400BBE2A1 /* GoogleService-Info.plist */,
 				3C4867591D2A3E4A000B6834 /* Assets.xcassets */,
 				3C48675B1D2A3E4A000B6834 /* LaunchScreen.storyboard */,
 				3C48675E1D2A3E4A000B6834 /* Info.plist */,
@@ -203,9 +238,15 @@
 			children = (
 				3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */,
 				3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */,
-				3C51D0E41D6B5097005A77A7 /* MaterialView.swift */,
 			);
 			name = TaxiCell;
+			sourceTree = "<group>";
+		};
+		3C6950E51D71DAF3007BFCBA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		9F9AE0B3D3F2A3CDF3A38A68 /* Frameworks */ = {
@@ -284,6 +325,7 @@
 				3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */,
 				3C4540A51D6C389A00409D4F /* MenuCell.xib in Resources */,
 				3C4867581D2A3E4A000B6834 /* Main.storyboard in Resources */,
+				3C41F6BB1D6EE6C400BBE2A1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +359,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DD7355EB93CA2BFF50F9E7D4 /* [CP] Copy Pods Resources */ = {
@@ -342,22 +384,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6950E21D71BD62007BFCBA /* PlaceVC.swift in Sources */,
+				3C6950E71D71E260007BFCBA /* PlaceImageCell.swift in Sources */,
 				3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */,
+				3C41F6BD1D6EED9800BBE2A1 /* Place.swift in Sources */,
 				3C4540AF1D6C3E9600409D4F /* WeatherForecast.swift in Sources */,
 				3C4540AD1D6C3E9600409D4F /* Constants.swift in Sources */,
+				3CA79E501D720177003C894B /* RoundedView.swift in Sources */,
+				3C4D97B51D6DC8650002B055 /* PlacesVC.swift in Sources */,
+				3C41F6B91D6EE62400BBE2A1 /* DataService.swift in Sources */,
 				3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */,
 				3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */,
 				3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */,
 				3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */,
 				3C4540A41D6C389A00409D4F /* MenuCell.swift in Sources */,
+				3C4D97B71D6DCFC40002B055 /* PlaceCell.swift in Sources */,
+				3C4D97B31D6DBC760002B055 /* MaterialButton.swift in Sources */,
 				3C0678091D42819F0046F6A2 /* Day.swift in Sources */,
 				3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */,
 				3C4540A71D6C3A3200409D4F /* MenuData.swift in Sources */,
 				3C0F84001D69D5EE0035E3B6 /* AccordionHeaderView.swift in Sources */,
 				3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */,
 				3C0210EC1D2C1C2C00989062 /* AboutVC.swift in Sources */,
+				3C4D97B11D6DB8420002B055 /* PlacesMenuVC.swift in Sources */,
 				3C4540AE1D6C3E9600409D4F /* TaxiService.swift in Sources */,
 				3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */,
+				3C4D97B91D6DE77B0002B055 /* PlacesDatabase.swift in Sources */,
 				3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */,
 				3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */,
 				3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */,
@@ -423,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -463,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

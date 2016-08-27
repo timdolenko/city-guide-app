@@ -13,8 +13,6 @@ import Alamofire
 class WeatherForecast {
     static let instance = WeatherForecast()
     
-    let KEY_FORECAST = "forecast"
-    
     let today = Date()
     
     private var _loadedForecast = [Day]()

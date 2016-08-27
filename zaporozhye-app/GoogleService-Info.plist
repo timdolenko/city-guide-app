@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>350100641756-j6jpg82rlhld192s57dvc18o778sfk3k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.350100641756-j6jpg82rlhld192s57dvc18o778sfk3k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBHtfiLaP6MTd-bS5txGop6cPDii-rAIDE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>350100641756</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sispo.zaporozhye-app</string>
+	<key>PROJECT_ID</key>
+	<string>zapapp-9fb71</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zapapp-9fb71.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:350100641756:ios:f4f0af0ac4596e8f</string>
+	<key>DATABASE_URL</key>
+	<string>https://zapapp-9fb71.firebaseio.com</string>
+</dict>
+</plist>

@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 
+//Keys
+let KEY_FORECAST = "forecast"
+let KEY_PLACES_DATA = "placesData"
+let KEY_EAT = "eat"
+let KEY_DRINK = "drink"
+let KEY_SMOKE = "smoke"
+let KEY_WALK = "walk"
+
 //Colors
 let SHADOW_COLOR: CGFloat = 0.0 / 255.0
 
@@ -18,4 +26,7 @@ let SHADOW_COLOR: CGFloat = 0.0 / 255.0
 let SEGUE_ABOUTVC = "AboutVC"
 let SEGUE_WEATHERVC = "WeatherVC"
 let SEGUE_TAXIVC = "TaxiVC"
+let SEGUE_PLACESMENUVC = "PlacesMenuVC"
+let SEGUE_PLACESVC = "PlacesVC"
+let SEGUE_PLACEVC = "PlaceVC"
 

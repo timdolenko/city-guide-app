@@ -9,4 +9,8 @@ target 'zaporozhye-app' do
 	pod 'Alamofire',
 		:git => ‘https://github.com/Alamofire/Alamofire.git',
 		:branch => ’swift3’
+    pod 'Firebase'
+    pod 'Firebase/Database'
+    pod 'Firebase/Core'
+    pod 'Firebase/Storage'
 end

@@ -87,7 +87,7 @@ extension TaxiVC : UITableViewDelegate, UITableViewDataSource {
             header.taxiNumberLbl.text = taxiArray[section].phones[0]
             
             if taxiArray[section].phones.count <= 1 {
-                print("Removed moreBtn in section:\(section)")
+                print("SISPO: Removed moreBtn in section:\(section)")
                 header.moreLbl.isHidden = true
                 header.moreImg.isHidden = true
             }
