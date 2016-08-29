@@ -17,33 +17,7 @@ class PlacesMenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        placesArray = DataService.ds.getPlacesData()
-        
-        if placesArray.count == 0 {
-            DataService.ds.REF_PLACES.observe(.value, with: { snapshot in
-                print(snapshot.value)
-                
-                self.placesArray = []
-                if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                    
-                    for snap in snapshots {
-                        print("SNAP: \(snap)")
-                        
-                        if let placeDict = snap.value as? Dictionary<String, AnyObject> {
-                            let place = DataService.ds.convertSnapToPlaceObject(snapData: placeDict)
-                            self.placesArray.append(place)
-                        }
-                    }
-                    
-                    DataService.ds.saveToLocalData(arrayOfPlaces: self.placesArray)
-                    
-                    
-                    self.isPlaceArrayReady = true
-                }
-            })
-        } else {
-            self.isPlaceArrayReady = true
-        }
+        placesArray = DataService.ds.placesArray
     }
     
 

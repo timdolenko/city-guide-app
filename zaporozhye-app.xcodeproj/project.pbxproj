@@ -22,8 +22,7 @@
 		3C4540A51D6C389A00409D4F /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C4540A31D6C389A00409D4F /* MenuCell.xib */; };
 		3C4540A71D6C3A3200409D4F /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540A61D6C3A3100409D4F /* MenuData.swift */; };
 		3C4540AD1D6C3E9600409D4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540AA1D6C3E9600409D4F /* Constants.swift */; };
-		3C4540AE1D6C3E9600409D4F /* TaxiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540AB1D6C3E9600409D4F /* TaxiService.swift */; };
-		3C4540AF1D6C3E9600409D4F /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540AC1D6C3E9600409D4F /* WeatherForecast.swift */; };
+		3C4540AF1D6C3E9600409D4F /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4540AC1D6C3E9600409D4F /* WeatherService.swift */; };
 		3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4867521D2A3E4A000B6834 /* AppDelegate.swift */; };
 		3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4867541D2A3E4A000B6834 /* MainVC.swift */; };
 		3C4867581D2A3E4A000B6834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4867561D2A3E4A000B6834 /* Main.storyboard */; };
@@ -33,9 +32,7 @@
 		3C4D97B31D6DBC760002B055 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B21D6DBC760002B055 /* MaterialButton.swift */; };
 		3C4D97B51D6DC8650002B055 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B41D6DC8650002B055 /* PlacesVC.swift */; };
 		3C4D97B71D6DCFC40002B055 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */; };
-		3C4D97B91D6DE77B0002B055 /* PlacesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D97B81D6DE77B0002B055 /* PlacesDatabase.swift */; };
 		3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0D81D6B39C7005A77A7 /* Taxi.swift */; };
-		3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */; };
 		3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */; };
 		3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */; };
 		3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E41D6B5097005A77A7 /* MaterialView.swift */; };
@@ -64,8 +61,7 @@
 		3C4540A31D6C389A00409D4F /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		3C4540A61D6C3A3100409D4F /* MenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		3C4540AA1D6C3E9600409D4F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3C4540AB1D6C3E9600409D4F /* TaxiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiService.swift; sourceTree = "<group>"; };
-		3C4540AC1D6C3E9600409D4F /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
+		3C4540AC1D6C3E9600409D4F /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		3C48674F1D2A3E4A000B6834 /* zaporozhye-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zaporozhye-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4867521D2A3E4A000B6834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C4867541D2A3E4A000B6834 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -77,9 +73,7 @@
 		3C4D97B21D6DBC760002B055 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		3C4D97B41D6DC8650002B055 /* PlacesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
-		3C4D97B81D6DE77B0002B055 /* PlacesDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesDatabase.swift; sourceTree = "<group>"; };
 		3C51D0D81D6B39C7005A77A7 /* Taxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
-		3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiDatabase.swift; sourceTree = "<group>"; };
 		3C51D0E01D6B4C2C005A77A7 /* TaxiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiCell.swift; sourceTree = "<group>"; };
 		3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxiCell.xib; sourceTree = "<group>"; };
 		3C51D0E41D6B5097005A77A7 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
@@ -136,9 +130,7 @@
 			children = (
 				3C0678081D42819F0046F6A2 /* Day.swift */,
 				3C51D0D81D6B39C7005A77A7 /* Taxi.swift */,
-				3C51D0DD1D6B3F7D005A77A7 /* TaxiDatabase.swift */,
 				3C4540A61D6C3A3100409D4F /* MenuData.swift */,
-				3C4D97B81D6DE77B0002B055 /* PlacesDatabase.swift */,
 				3C41F6BC1D6EED9800BBE2A1 /* Place.swift */,
 			);
 			name = Model;
@@ -188,10 +180,7 @@
 		3C4540A91D6C3E8600409D4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3C4540AB1D6C3E9600409D4F /* TaxiService.swift */,
 				3C4540AA1D6C3E9600409D4F /* Constants.swift */,
-				3C4540AC1D6C3E9600409D4F /* WeatherForecast.swift */,
-				3C41F6B81D6EE62400BBE2A1 /* DataService.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -245,6 +234,8 @@
 		3C6950E51D71DAF3007BFCBA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3C4540AC1D6C3E9600409D4F /* WeatherService.swift */,
+				3C41F6B81D6EE62400BBE2A1 /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -386,9 +377,8 @@
 			files = (
 				3C6950E21D71BD62007BFCBA /* PlaceVC.swift in Sources */,
 				3C6950E71D71E260007BFCBA /* PlaceImageCell.swift in Sources */,
-				3C51D0DE1D6B3F7D005A77A7 /* TaxiDatabase.swift in Sources */,
 				3C41F6BD1D6EED9800BBE2A1 /* Place.swift in Sources */,
-				3C4540AF1D6C3E9600409D4F /* WeatherForecast.swift in Sources */,
+				3C4540AF1D6C3E9600409D4F /* WeatherService.swift in Sources */,
 				3C4540AD1D6C3E9600409D4F /* Constants.swift in Sources */,
 				3CA79E501D720177003C894B /* RoundedView.swift in Sources */,
 				3C4D97B51D6DC8650002B055 /* PlacesVC.swift in Sources */,
@@ -407,9 +397,7 @@
 				3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */,
 				3C0210EC1D2C1C2C00989062 /* AboutVC.swift in Sources */,
 				3C4D97B11D6DB8420002B055 /* PlacesMenuVC.swift in Sources */,
-				3C4540AE1D6C3E9600409D4F /* TaxiService.swift in Sources */,
 				3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */,
-				3C4D97B91D6DE77B0002B055 /* PlacesDatabase.swift in Sources */,
 				3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */,
 				3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */,
 				3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */,

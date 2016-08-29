@@ -23,13 +23,15 @@ class MainVC: UIViewController {
         tapRec.addTarget(self, action: #selector(MainVC.weatherBtnTapped))
         weatherBtn.addGestureRecognizer(tapRec)
         
-        WeatherForecast.instance.loadForecast()
+        WeatherService.instance.loadForecast()
+        DataService.ds.getTaxiData()
+        DataService.ds.getPlacesData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(MainVC.onForecastLoaded(_:)), name: NSNotification.Name("forecastLoaded") as NSNotification.Name, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if WeatherForecast.instance.loadedForecast.count > 0 {
+        if WeatherService.instance.loadedForecast.count > 0 {
             updateImg()
         }
     }
@@ -47,7 +49,7 @@ class MainVC: UIViewController {
     }
 
     func updateImg() {
-        self.weatherBtn.image = UIImage(named: "\(WeatherForecast.instance.getMainImagePath(WeatherForecast.instance.loadedForecast[0].weatherId))")
+        self.weatherBtn.image = UIImage(named: "\(WeatherService.instance.getMainImagePath(WeatherService.instance.loadedForecast[0].weatherId))")
     }
 
     

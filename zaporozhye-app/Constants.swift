@@ -12,6 +12,7 @@ import UIKit
 //Keys
 let KEY_FORECAST = "forecast"
 let KEY_PLACES_DATA = "placesData"
+let KEY_TAXI_DATA = "taxiData"
 let KEY_EAT = "eat"
 let KEY_DRINK = "drink"
 let KEY_SMOKE = "smoke"

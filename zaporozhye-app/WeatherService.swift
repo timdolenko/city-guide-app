@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import Alamofire
 
-class WeatherForecast {
-    static let instance = WeatherForecast()
+class WeatherService {
+    static let instance = WeatherService()
     
     let today = Date()
     
@@ -139,7 +139,7 @@ class WeatherForecast {
         }
         
         if loadedForecast.count == 0 {
-            WeatherForecast.instance.downloadForecast()
+            WeatherService.instance.downloadForecast()
         } else {
             checkForecast()
         }

@@ -19,7 +19,7 @@ class AccordionHeaderView: FZAccordionTableViewHeaderView {
     
     @IBAction func callTaxiFromHeader(_ sender: AnyObject) {
         if let phone = taxiNumberLbl.text {
-            TaxiService.callTaxi(phone: phone)
+            DataService.ds.call(phone: phone)
         }
     }
 }

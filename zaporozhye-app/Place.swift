@@ -87,7 +87,7 @@ class Place: NSObject, NSCoding {
         guard let name = aDecoder.decodeObject(forKey: "name") as? String,
         let placeDesc = aDecoder.decodeObject(forKey: "description") as? String,
         let geoLocLat = aDecoder.decodeObject(forKey: "geoLocLat") as? Double,
-        let geoLocLon = aDecoder.decodeObject(forKey: "geoLocLat") as? Double,
+        let geoLocLon = aDecoder.decodeObject(forKey: "geoLocLon") as? Double,
         let phone = aDecoder.decodeObject(forKey: "phone") as? String,
         let imgPaths = aDecoder.decodeObject(forKey: "imgPaths") as? [String],
         let drink = aDecoder.decodeObject(forKey: "drink") as? Bool,
@@ -121,8 +121,3 @@ class Place: NSObject, NSCoding {
         aCoder.encode(self._geoLocLon, forKey: "geoLocLon")
     }
 }
-
-extension String {
-    var boolValue: Bool {
-        return NSString(string: self).boolValue
-}}

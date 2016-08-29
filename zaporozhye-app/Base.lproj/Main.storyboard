@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zap" translatesAutoresizingMaskIntoConstraints="NO" id="A2k-Up-DoC"/>
@@ -204,7 +204,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WFs-Ah-qJh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bza-i4-yQD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-ub-sh9"/>
@@ -721,7 +721,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6nc-79-iTA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I3f-TH-qX3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zap2" translatesAutoresizingMaskIntoConstraints="NO" id="3fT-Kj-YCc">
@@ -958,7 +958,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                         <viewControllerLayoutGuide type="bottom" id="eJB-tN-dpT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4RD-Vs-AV8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-UF-yjL">
@@ -1030,7 +1030,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                         <viewControllerLayoutGuide type="bottom" id="bQV-nP-Bwq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hsl-dw-Vc1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="nfG-Na-VJX">
@@ -1201,7 +1201,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                         <viewControllerLayoutGuide type="bottom" id="JiB-MK-SrT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rU6-pS-OJT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLA-ca-y1a">
@@ -1214,17 +1214,17 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlaceCell" id="sEy-5i-aQy" customClass="PlaceCell" customModule="zaporozhye_app" customModuleProvider="target">
-                                        <frame key="frameInset" width="178" height="227"/>
+                                        <frame key="frameInset" minX="71" width="178" height="227"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="178" height="227"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAa-kI-gph" customClass="MaterialView" customModule="zaporozhye_app" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="10" minY="10" width="49" height="2"/>
+                                                    <frame key="frameInset" minX="10" minY="10" width="44" height="11"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-Hf-qQV">
-                                                            <frame key="frameInset" minX="8" minY="8"/>
+                                                            <frame key="frameInset" minX="8" minY="8" width="45"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="OQh-Hf-qQV" secondAttribute="height" multiplier="71:75" id="E69-kQ-65V"/>
                                                             </constraints>
@@ -1326,12 +1326,12 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                         <viewControllerLayoutGuide type="bottom" id="Lpd-db-GFG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="erQ-Nz-ZSr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="qYl-7X-Xpy">
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="QSa-My-gRX"/>
+                                    <constraint firstAttribute="height" constant="50" id="QSa-My-gRX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="BPc-2o-dj2">
@@ -1357,22 +1357,20 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                                     <action selector="backBtnPressed:" destination="Weg-yL-CTz" eventType="touchUpInside" id="zdh-nU-9hP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dive into eastern culture while smoking hookah and cigarettes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-Zz-JWj">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bfU-dg-9mC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3806706706767" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTV-vV-jPj">
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="cag-hN-WHL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DZa-Dy-pBg">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dive into eastern culture while smoking hookah and cigarettes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-Zz-JWj">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3806706706767" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTV-vV-jPj">
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H2J-Nr-gA0">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1486,33 +1484,29 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                             <constraint firstItem="qYl-7X-Xpy" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leading" id="5nI-YV-BIh"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="centerX" secondItem="erQ-Nz-ZSr" secondAttribute="centerX" id="8dz-oK-y6L"/>
                             <constraint firstItem="H2J-Nr-gA0" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leading" id="A5g-dz-p8q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DZa-Dy-pBg" secondAttribute="trailing" id="AuE-en-2my"/>
+                            <constraint firstItem="DZa-Dy-pBg" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leadingMargin" id="Bb6-gO-3Vb"/>
                             <constraint firstItem="jwG-so-gMQ" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leading" constant="20" id="Dyg-xt-vaX"/>
                             <constraint firstAttribute="trailing" secondItem="qYl-7X-Xpy" secondAttribute="trailing" id="GEP-jN-1Zl"/>
                             <constraint firstItem="H2J-Nr-gA0" firstAttribute="top" secondItem="qYl-7X-Xpy" secondAttribute="bottom" id="H9O-3c-Vgf"/>
                             <constraint firstItem="qYl-7X-Xpy" firstAttribute="top" secondItem="erQ-Nz-ZSr" secondAttribute="top" id="IK1-fk-AVV"/>
-                            <constraint firstItem="kXX-Zz-JWj" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leadingMargin" id="IbJ-06-AWr"/>
+                            <constraint firstItem="u9N-SS-Qga" firstAttribute="top" secondItem="DZa-Dy-pBg" secondAttribute="bottom" constant="8" id="Ipf-nF-qS8"/>
                             <constraint firstItem="Iri-sf-bct" firstAttribute="width" secondItem="u9N-SS-Qga" secondAttribute="width" id="K5v-vU-1Qz"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="centerY" secondItem="ldT-2o-PNs" secondAttribute="centerY" id="KYe-Ph-aIC"/>
                             <constraint firstAttribute="trailing" secondItem="H2J-Nr-gA0" secondAttribute="trailing" id="LZn-GO-ea4"/>
                             <constraint firstItem="Iri-sf-bct" firstAttribute="centerX" secondItem="u9N-SS-Qga" secondAttribute="centerX" id="M5A-BE-ho2"/>
                             <constraint firstItem="BPc-2o-dj2" firstAttribute="centerX" secondItem="erQ-Nz-ZSr" secondAttribute="centerX" id="N8T-Te-HLw"/>
                             <constraint firstItem="BPc-2o-dj2" firstAttribute="width" secondItem="erQ-Nz-ZSr" secondAttribute="width" multiplier="0.75" id="QAl-fN-dSW"/>
-                            <constraint firstItem="kXX-Zz-JWj" firstAttribute="trailing" secondItem="erQ-Nz-ZSr" secondAttribute="trailingMargin" id="Qey-bd-1fn"/>
-                            <constraint firstItem="bTV-vV-jPj" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leadingMargin" id="Rmb-DK-SqV"/>
                             <constraint firstItem="H2J-Nr-gA0" firstAttribute="width" secondItem="qYl-7X-Xpy" secondAttribute="width" id="SIw-AV-azt"/>
                             <constraint firstItem="Iri-sf-bct" firstAttribute="centerY" secondItem="u9N-SS-Qga" secondAttribute="centerY" id="TgM-O6-wYG"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="centerX" secondItem="ldT-2o-PNs" secondAttribute="centerX" id="Uc1-yJ-Ugs"/>
                             <constraint firstItem="u9N-SS-Qga" firstAttribute="centerX" secondItem="erQ-Nz-ZSr" secondAttribute="centerX" id="XJi-7y-4ND"/>
                             <constraint firstItem="Lpd-db-GFG" firstAttribute="top" secondItem="QMS-hR-UqY" secondAttribute="bottom" constant="8" id="XcB-oi-yis"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="height" secondItem="ldT-2o-PNs" secondAttribute="height" id="YhZ-EE-cvY"/>
-                            <constraint firstItem="bTV-vV-jPj" firstAttribute="top" secondItem="kXX-Zz-JWj" secondAttribute="bottom" constant="8" id="ftI-pP-ikk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bTV-vV-jPj" secondAttribute="trailing" id="h1o-he-4I4"/>
-                            <constraint firstItem="kXX-Zz-JWj" firstAttribute="top" secondItem="H2J-Nr-gA0" secondAttribute="bottom" constant="8" id="hfk-Y8-HRV"/>
+                            <constraint firstItem="DZa-Dy-pBg" firstAttribute="top" secondItem="H2J-Nr-gA0" secondAttribute="bottom" constant="8" id="bOx-gw-bdb"/>
                             <constraint firstItem="Iri-sf-bct" firstAttribute="height" secondItem="u9N-SS-Qga" secondAttribute="height" id="jwd-UO-WQs"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="top" secondItem="u9N-SS-Qga" secondAttribute="bottom" constant="8" id="nNT-HC-kiK"/>
                             <constraint firstItem="H2J-Nr-gA0" firstAttribute="top" secondItem="BPc-2o-dj2" secondAttribute="bottom" constant="5" id="pOg-RX-LFc"/>
-                            <constraint firstItem="kXX-Zz-JWj" firstAttribute="trailing" secondItem="erQ-Nz-ZSr" secondAttribute="trailingMargin" id="se6-th-9Lh"/>
-                            <constraint firstItem="kXX-Zz-JWj" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leadingMargin" id="t2Q-Ia-qKa"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="width" secondItem="ldT-2o-PNs" secondAttribute="width" id="wYs-nf-jer"/>
                         </constraints>
                     </view>
@@ -1538,7 +1532,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                         <viewControllerLayoutGuide type="bottom" id="LnW-fS-EcQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7zI-Vu-5xR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mOl-fg-nNV" customClass="FZAccordionTableView">
@@ -1578,7 +1572,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="y8U-dh-ajt" firstAttribute="centerY" secondItem="XBR-Fk-JdR" secondAttribute="centerY" id="0x6-Ag-APF"/>
                             <constraint firstItem="mOl-fg-nNV" firstAttribute="leading" secondItem="7zI-Vu-5xR" secondAttribute="leading" id="55f-ei-EzN"/>

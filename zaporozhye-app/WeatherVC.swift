@@ -30,7 +30,7 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if WeatherForecast.instance.loadedForecast.count > 0 {
+        if WeatherService.instance.loadedForecast.count > 0 {
             showWeather(0)
         }
     }
@@ -40,13 +40,13 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return WeatherForecast.instance.loadedForecast.count
+        return WeatherService.instance.loadedForecast.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as? WeatherCell {
-            if WeatherForecast.instance.loadedForecast.count > 0 {
-                let day = WeatherForecast.instance.loadedForecast[(indexPath as NSIndexPath).row]
+            if WeatherService.instance.loadedForecast.count > 0 {
+                let day = WeatherService.instance.loadedForecast[(indexPath as NSIndexPath).row]
                 cell.configureCell(day, temp: tempType)
                 return cell
             }
@@ -72,7 +72,7 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func reloadWeather() {
-        WeatherForecast.instance.downloadForecast()
+        WeatherService.instance.downloadForecast()
     }
     
     func refresh() {
@@ -81,13 +81,13 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func showWeather(_ num: Int) {
-        let selectedDay = WeatherForecast.instance.loadedForecast[num]
-        mainWeatherImg.image = UIImage(named: "\(WeatherForecast.instance.getMainImagePath(selectedDay.weatherId))")
+        let selectedDay = WeatherService.instance.loadedForecast[num]
+        mainWeatherImg.image = UIImage(named: "\(WeatherService.instance.getMainImagePath(selectedDay.weatherId))")
         mainWeatherLbl.text = selectedDay.weatherDesc.capitalized
         windSpeedLbl.text = selectedDay.windSpeed
         tempLbl.text = selectedDay.tempC
         rainVolumeLbl.text = selectedDay.rainVolume
-        windDirectImg.image = UIImage(named: "\(WeatherForecast.instance.getWindImagePath(selectedDay.windDirect))")
+        windDirectImg.image = UIImage(named: "\(WeatherService.instance.getWindImagePath(selectedDay.windDirect))")
         
     }
     

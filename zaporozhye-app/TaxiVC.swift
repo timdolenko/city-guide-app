@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class TaxiVC: UIViewController {
     static private let kTableViewCellReuseIdentifier = "TaxiCell"
@@ -17,11 +18,15 @@ class TaxiVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if DataService.ds.taxiArray.count > 0 {
+            taxiArray = DataService.ds.taxiArray
+        }
+        
+        
         tableView.allowMultipleSectionsOpen = true
         tableView.register(UINib(nibName: "TaxiCell",bundle: nil), forCellReuseIdentifier: TaxiVC.kTableViewCellReuseIdentifier)
         tableView.register(UINib(nibName: "AccordionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: AccordionHeaderView.kAccordionHeaderViewReuseIdentifier)
-        
-        taxiArray = TaxiService.getArrayOfTaxi(database: TaxiDatabase.TaxiData)
     }
     
     @IBAction func backBtnPressed(_ sender: AnyObject) {
@@ -44,7 +49,7 @@ extension TaxiVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let phone = taxiArray[indexPath.section].phones[indexPath.row + 1]
         
-        TaxiService.callTaxi(phone: phone)
+        DataService.ds.call(phone: phone)
         
     }
     

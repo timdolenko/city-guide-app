@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MapKit
 
 class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -22,6 +23,7 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("SISPO: GeoLoc Long: \(place.geoLocLon), GeoLocLat \(place.geoLocLat)")
         print("SISPO: Selected place has \(place.imgPaths.count) image paths")
         
         collectionView.dataSource = self
@@ -64,11 +66,31 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         }
         
     }
+    
+    func openMapForPlace(lat: Double, lon: Double) {
+        let latitude: CLLocationDegrees = lat
+        let longitude: CLLocationDegrees = lon
+        
+        let regionDistance: CLLocationDistance = 2000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "\(place.name)"
+        mapItem.openInMaps(launchOptions: options)
+        print("SISPO: Open map with lat: \(lat) and long: \(lon)")
+    }
 
     @IBAction func reservationBtnPressed(_ sender: AnyObject) {
+        DataService.ds.call(phone: place.phone)
     }
     
     @IBAction func showOnMapPressed(_ sender: AnyObject) {
+        openMapForPlace(lat: place.geoLocLat, lon: place.geoLocLon)
     }
     
 
