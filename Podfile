@@ -6,12 +6,14 @@ target 'zaporozhye-app' do
   use_frameworks!
 
   # Pods for zaporozhye-app
-	pod 'Alamofire',
-		:git => ‘https://github.com/Alamofire/Alamofire.git',
-		:branch => ’swift3’
+    pod 'Alamofire',
+		:git => 'https://github.com/Alamofire/Alamofire.git',
+        :branch => 'swift3'
     pod 'Firebase'
     pod 'Firebase/Database'
     pod 'Firebase/Core'
     pod 'Firebase/Storage'
-    pod 'NVActivityIndicatorView'
+    pod 'NVActivityIndicatorView',
+    :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git',
+    :branch => 'swift3'
 end

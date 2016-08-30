@@ -26,7 +26,7 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.refresh), name: "forecastLoaded" as NSNotification.Name, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.refresh), name: Notification.Name("forecastLoaded"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,10 +57,6 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         showWeather((indexPath as NSIndexPath).row)
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
 
     @IBAction func backBtnPressed(_ sender: AnyObject) {

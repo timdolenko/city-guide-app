@@ -14,11 +14,13 @@ class PlacesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var titleLlb: UILabel!
     
     var placesArray = [Place]()
-    var placesTitle = "Places"
+    var type = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLlb.text = placesTitle
+        titleLlb.text = type
+        placesArray = DataService.ds.getArrayOf(type: type)
+        collectionView.reloadData()
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -54,9 +56,9 @@ class PlacesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         performSegue(withIdentifier: SEGUE_PLACEVC, sender: selectedPlace)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SEGUE_PLACEVC {
-            if let placeVC = segue.destinationViewController as? PlaceVC {
+            if let placeVC = segue.destination as? PlaceVC {
                 if let place = sender as? Place {
                     placeVC.place = place
                 }

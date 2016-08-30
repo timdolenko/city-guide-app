@@ -28,32 +28,30 @@ class Day: NSObject, NSCoding {
     }
     
     func getDayOfWeek() {
-        let day = self.date
+        if let day = self.date {
             let weekDayString: String
-            let myCalendar = Calendar(calendarIdentifier: Calendar.Identifier.gregorian)!
-            let myComponents = myCalendar.components(.weekday, from: day!)
-            let weekDay = myComponents.weekday
-        if let weekDay = weekDay {
-            switch weekDay{
-            case 1:
-                weekDayString = "SU"
-            case 2:
-                weekDayString = "MO"
-            case 3:
-                weekDayString = "TU"
-            case 4:
-                weekDayString = "WE"
-            case 5:
-                weekDayString = "TH"
-            case 6:
-                weekDayString = "FR"
-            case 7:
-                weekDayString = "SA"
-            default:
-                weekDayString = "Er"
-            }
-            self.dayOfWeek = weekDayString
- 
+            let myCalendar = Calendar(identifier: Calendar.Identifier.gregorian)
+            let weekDay = myCalendar.component(.weekday, from: day)
+        
+                switch weekDay{
+                case 1:
+                    weekDayString = "SU"
+                case 2:
+                    weekDayString = "MO"
+                case 3:
+                    weekDayString = "TU"
+                case 4:
+                    weekDayString = "WE"
+                case 5:
+                    weekDayString = "TH"
+                case 6:
+                    weekDayString = "FR"
+                case 7:
+                    weekDayString = "SA"
+                default:
+                    weekDayString = "Er"
+                }
+                self.dayOfWeek = weekDayString
         }
     }
     

@@ -39,6 +39,11 @@
 		3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */; };
 		3C6950E21D71BD62007BFCBA /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6950E11D71BD62007BFCBA /* PlaceVC.swift */; };
 		3C6950E71D71E260007BFCBA /* PlaceImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */; };
+		3C755BB41D75CC070079C879 /* OrderFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB31D75CC070079C879 /* OrderFoodVC.swift */; };
+		3C755BB61D75E4B40079C879 /* MiniRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */; };
+		3C755BB81D75EC720079C879 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB71D75EC720079C879 /* FoodCell.swift */; };
+		3C755BBA1D75F2620079C879 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB91D75F2620079C879 /* Food.swift */; };
+		3C755BBD1D75F78F0079C879 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BBC1D75F78F0079C879 /* DateExtension.swift */; };
 		3CA79E501D720177003C894B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA79E4F1D720177003C894B /* RoundedView.swift */; };
 		4A4C38B439ECCA5293887B78 /* Pods_zaporozhye_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +85,11 @@
 		3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		3C6950E11D71BD62007BFCBA /* PlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
 		3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceImageCell.swift; sourceTree = "<group>"; };
+		3C755BB31D75CC070079C879 /* OrderFoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFoodVC.swift; sourceTree = "<group>"; };
+		3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniRoundedView.swift; sourceTree = "<group>"; };
+		3C755BB71D75EC720079C879 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		3C755BB91D75F2620079C879 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		3C755BBC1D75F78F0079C879 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		3CA79E4F1D720177003C894B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zaporozhye_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +142,7 @@
 				3C51D0D81D6B39C7005A77A7 /* Taxi.swift */,
 				3C4540A61D6C3A3100409D4F /* MenuData.swift */,
 				3C41F6BC1D6EED9800BBE2A1 /* Place.swift */,
+				3C755BB91D75F2620079C879 /* Food.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,6 +160,8 @@
 				3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */,
 				3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */,
 				3CA79E4F1D720177003C894B /* RoundedView.swift */,
+				3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */,
+				3C755BB71D75EC720079C879 /* FoodCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 				3C4D97B01D6DB8420002B055 /* PlacesMenuVC.swift */,
 				3C4D97B41D6DC8650002B055 /* PlacesVC.swift */,
 				3C6950E11D71BD62007BFCBA /* PlaceVC.swift */,
+				3C755BB31D75CC070079C879 /* OrderFoodVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -207,6 +221,7 @@
 		3C4867511D2A3E4A000B6834 /* zaporozhye-app */ = {
 			isa = PBXGroup;
 			children = (
+				3C755BBB1D75F76D0079C879 /* Extensions */,
 				3C6950E51D71DAF3007BFCBA /* Services */,
 				3C4540A91D6C3E8600409D4F /* Utils */,
 				3C39F63C1D422D4C00B13D73 /* Model */,
@@ -238,6 +253,14 @@
 				3C41F6B81D6EE62400BBE2A1 /* DataService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		3C755BBB1D75F76D0079C879 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C755BBC1D75F78F0079C879 /* DateExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		9F9AE0B3D3F2A3CDF3A38A68 /* Frameworks */ = {
@@ -379,17 +402,21 @@
 				3C6950E71D71E260007BFCBA /* PlaceImageCell.swift in Sources */,
 				3C41F6BD1D6EED9800BBE2A1 /* Place.swift in Sources */,
 				3C4540AF1D6C3E9600409D4F /* WeatherService.swift in Sources */,
+				3C755BBD1D75F78F0079C879 /* DateExtension.swift in Sources */,
 				3C4540AD1D6C3E9600409D4F /* Constants.swift in Sources */,
 				3CA79E501D720177003C894B /* RoundedView.swift in Sources */,
 				3C4D97B51D6DC8650002B055 /* PlacesVC.swift in Sources */,
 				3C41F6B91D6EE62400BBE2A1 /* DataService.swift in Sources */,
 				3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */,
+				3C755BB61D75E4B40079C879 /* MiniRoundedView.swift in Sources */,
 				3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */,
 				3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */,
 				3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */,
 				3C4540A41D6C389A00409D4F /* MenuCell.swift in Sources */,
+				3C755BB41D75CC070079C879 /* OrderFoodVC.swift in Sources */,
 				3C4D97B71D6DCFC40002B055 /* PlaceCell.swift in Sources */,
 				3C4D97B31D6DBC760002B055 /* MaterialButton.swift in Sources */,
+				3C755BBA1D75F2620079C879 /* Food.swift in Sources */,
 				3C0678091D42819F0046F6A2 /* Day.swift in Sources */,
 				3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */,
 				3C4540A71D6C3A3200409D4F /* MenuData.swift in Sources */,
@@ -400,6 +427,7 @@
 				3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */,
 				3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */,
 				3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */,
+				3C755BB81D75EC720079C879 /* FoodCell.swift in Sources */,
 				3C0F84021D69D5EE0035E3B6 /* TaxiVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

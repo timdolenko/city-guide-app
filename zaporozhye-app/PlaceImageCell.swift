@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class PlaceImageCell: UICollectionViewCell {
     
@@ -20,7 +21,7 @@ class PlaceImageCell: UICollectionViewCell {
             let ref = FIRStorage.storage().reference().child(imgPath)
             ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
-                    print("SISPO: Unable to download image from Firebase storage: \(error?.debugDescription)")
+                    print("SISPO: Unable to download image from Firebase storage: \(error)")
                 } else {
                     print("SISPO: Image downloaded from Firebase storage")
                     if let imgData = data {

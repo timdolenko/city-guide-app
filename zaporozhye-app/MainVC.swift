@@ -24,8 +24,7 @@ class MainVC: UIViewController {
         weatherBtn.addGestureRecognizer(tapRec)
         
         WeatherService.instance.loadForecast()
-        DataService.ds.getTaxiData()
-        DataService.ds.getPlacesData()
+        DataService.ds.getDataFromFirebase()
         
         NotificationCenter.default.addObserver(self, selector: #selector(MainVC.onForecastLoaded(_:)), name: NSNotification.Name("forecastLoaded") as NSNotification.Name, object: nil)
     }
@@ -36,7 +35,7 @@ class MainVC: UIViewController {
         }
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
     

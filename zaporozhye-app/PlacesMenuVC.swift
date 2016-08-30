@@ -17,7 +17,6 @@ class PlacesMenuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        placesArray = DataService.ds.placesArray
     }
     
 
@@ -27,94 +26,32 @@ class PlacesMenuVC: UIViewController {
     
     
     @IBAction func eatBtnPressed(_ sender: AnyObject) {
-        performSegueWithFilteredArrayOf(type: KEY_EAT)
+        performSegue(withIdentifier: SEGUE_PLACESVC, sender: KEY_EAT)
     }
     
     @IBAction func drinkBtnPressed(_ sender: AnyObject) {
-        performSegueWithFilteredArrayOf(type: KEY_DRINK)
+        performSegue(withIdentifier: SEGUE_PLACESVC, sender: KEY_DRINK)
     }
 
     @IBAction func smokeBtnPressed(_ sender: AnyObject) {
-        performSegueWithFilteredArrayOf(type: KEY_SMOKE)
+        performSegue(withIdentifier: SEGUE_PLACESVC, sender: KEY_SMOKE)
     }
     
     @IBAction func walkBtnPressed(_ sender: AnyObject) {
-        performSegueWithFilteredArrayOf(type: KEY_WALK)
+        performSegue(withIdentifier: SEGUE_PLACESVC, sender: KEY_WALK)
     }
 
     @IBAction func questionBtnPressed(_ sender: AnyObject) {
         
     }
     
-    func performSegueWith(dict: Dictionary<String,AnyObject>) {
-        performSegue(withIdentifier: SEGUE_PLACESVC, sender: dict)
-    }
-    
-    func performSegueWithFilteredArrayOf(type: String) {
-        
-        var filteredPlaces = [Place]()
-        
-        var dict: Dictionary<String, AnyObject> = ["title":""]
-        
-        if isPlaceArrayReady {
-            
-                switch type {
-                case KEY_EAT:
-                    filteredPlaces = placesArray.filter({ (place:Place) -> Bool in
-                        place.eat
-                    })
-                    dict["title"] = "Eat"
-                    dict["places"] = filteredPlaces
-                    performSegueWith(dict: dict)
-                case KEY_WALK:
-                    filteredPlaces = placesArray.filter({ (place:Place) -> Bool in
-                        place.walk
-                    })
-                    dict["title"] = "Walk"
-                    dict["places"] = filteredPlaces
-                    performSegueWith(dict: dict)
-                case KEY_DRINK:
-                    filteredPlaces = placesArray.filter({ (place:Place) -> Bool in
-                        place.drink
-                    })
-                    dict["title"] = "Drink"
-                    dict["places"] = filteredPlaces
-                    performSegueWith(dict: dict)
-                case KEY_SMOKE:
-                    filteredPlaces = placesArray.filter({ (place:Place) -> Bool in
-                        place.smoke
-                    })
-                    dict["title"] = "Smoke"
-                    dict["places"] = filteredPlaces
-                    performSegueWith(dict: dict)
-                default:
-                    print("SISPO: Error filtering places array")
-                }
-
-        } else {
-            let alert = UIAlertController(title: "Please wait", message: "Downloading data from internet", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(ok)
-            present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SEGUE_PLACESVC {
-            if let placesVC = segue.destinationViewController as? PlacesVC {
-                if let dict = sender as? Dictionary<String,AnyObject> {
-                    if let placesArray = dict["places"] as? [Place] {
-                        placesVC.placesArray = placesArray
-                    } else {
-                        print("SISPO: Error in placesArray")
-                    }
-                    if let title = dict["title"] as? String {
-                        placesVC.placesTitle = title
-                    } else {
-                        print("SISPO: Error in places title")
-                    }
+            if let placesVC = segue.destination as? PlacesVC {
+                if let type = sender as? String {
+                    placesVC.type = type
                 } else {
-                    print("SISPO: Error in places dictionary")
+                    print("SISPO: Error in places type")
                 }
             } else {
                 print("SISPO: Error in places ViewController")

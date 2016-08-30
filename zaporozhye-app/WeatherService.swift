@@ -27,7 +27,8 @@ class WeatherService {
         
         let address = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=47.83&lon=35.16&cnt=7 &APPID=d970a32a11bfc0d8f84b908a83f9a517"
         let url = address.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        Alamofire.request(.GET, url).responseJSON { response in
+        
+        Alamofire.request(url, withMethod: .get).responseJSON { response in
             let result = response.result
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
@@ -109,7 +110,7 @@ class WeatherService {
                             self._loadedForecast.append(dayX)
                             if self._loadedForecast.count == 7 {
                                 self.saveForecast()
-                                NotificationCenter.default.post(NSNotification(name: "forecastLoaded" as NSNotification.Name, object: nil) as Notification)
+                                NotificationCenter.default.post(Notification(name: Notification.Name("forecastLoaded"), object: nil))
                             }
                         }
                         
@@ -122,7 +123,8 @@ class WeatherService {
             
         }
         
-    }
+        }
+    
     
     func saveForecast() {
         let forecastData = NSKeyedArchiver.archivedData(withRootObject: _loadedForecast)
@@ -152,7 +154,7 @@ class WeatherService {
         let downloadDate = loadedForecast[0].date
         
         let order = Calendar.current.compare(self.today, to: downloadDate!,
-                                                             toUnitGranularity: .day)
+                                             toGranularity: .day)
         switch order {
         case .orderedDescending, .orderedAscending:
             downloadForecast()

@@ -25,9 +25,9 @@
 import Foundation
 
 /// Used to store all response data returned from a completed `Request`.
-public struct Response<Value, Error: ErrorProtocol> {
+public struct Response<Value> {
     /// The URL request sent to the server.
-    public let request: Foundation.URLRequest?
+    public let request: URLRequest?
 
     /// The server's response to the URL request.
     public let response: HTTPURLResponse?
@@ -36,28 +36,26 @@ public struct Response<Value, Error: ErrorProtocol> {
     public let data: Data?
 
     /// The result of response serialization.
-    public let result: Result<Value, Error>
+    public let result: Result<Value>
 
     /// The timeline of the complete lifecycle of the `Request`.
     public let timeline: Timeline
 
-    /**
-        Initializes the `Response` instance with the specified URL request, URL response, server data and response
-        serialization result.
-
-        - parameter request:  The URL request sent to the server.
-        - parameter response: The server's response to the URL request.
-        - parameter data:     The data returned by the server.
-        - parameter result:   The result of response serialization.
-        - parameter timeline: The timeline of the complete lifecycle of the `Request`. Defaults to `Timeline()`.
-
-        - returns: the new `Response` instance.
-    */
+    /// Initializes the `Response` instance with the specified URL request, URL response, server data and response
+    /// serialization result.
+    ///
+    /// - parameter request:  The URL request sent to the server.
+    /// - parameter response: The server's response to the URL request.
+    /// - parameter data:     The data returned by the server.
+    /// - parameter result:   The result of response serialization.
+    /// - parameter timeline: The timeline of the complete lifecycle of the `Request`. Defaults to `Timeline()`.
+    ///
+    /// - returns: the new `Response` instance.
     public init(
-        request: Foundation.URLRequest?,
+        request: URLRequest?,
         response: HTTPURLResponse?,
         data: Data?,
-        result: Result<Value, Error>,
+        result: Result<Value>,
         timeline: Timeline = Timeline())
     {
         self.request = request

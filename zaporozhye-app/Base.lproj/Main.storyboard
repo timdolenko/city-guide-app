@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uwB-u7-bgC">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -521,7 +521,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherCell" id="N3q-r7-kAq" customClass="WeatherCell" customModule="zaporozhye_app" customModuleProvider="target">
-                                                                <frame key="frameInset" width="66" height="110"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="66" height="110"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                     <rect key="frame" x="0.0" y="0.0" width="66" height="110"/>
@@ -1015,11 +1015,12 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                         <segue destination="9tN-Az-iDQ" kind="show" identifier="TaxiVC" id="DZS-sq-ORt"/>
                         <segue destination="uqk-fT-joC" kind="show" identifier="WeatherVC" id="agj-mj-ak2"/>
                         <segue destination="Du4-qf-hkt" kind="show" identifier="PlacesMenuVC" id="8UT-Ae-uhu"/>
+                        <segue destination="Weg-yL-CTz" kind="show" identifier="PlacesVCfromMenu" id="HMU-8F-xQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3L-u6-bGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="119"/>
+            <point key="canvasLocation" x="1582.5" y="167.95774647887325"/>
         </scene>
         <!--Places MenuVC-->
         <scene sceneID="iSV-Ac-rdS">
@@ -1214,23 +1215,20 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlaceCell" id="sEy-5i-aQy" customClass="PlaceCell" customModule="zaporozhye_app" customModuleProvider="target">
-                                        <frame key="frameInset" minX="71" width="178" height="227"/>
+                                        <rect key="frame" x="71" y="0.0" width="178" height="227"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="178" height="227"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAa-kI-gph" customClass="MaterialView" customModule="zaporozhye_app" customModuleProvider="target">
-                                                    <frame key="frameInset" minX="10" minY="10" width="44" height="11"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAa-kI-gph" customClass="MaterialView" customModule="zaporozhye_app" customModuleProvider="target">
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-Hf-qQV">
-                                                            <frame key="frameInset" minX="8" minY="8" width="45"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-Hf-qQV">
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="OQh-Hf-qQV" secondAttribute="height" multiplier="71:75" id="E69-kQ-65V"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tibet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-Lf-QFb">
-                                                            <frame key="frameInset" minX="8" minY="16" width="56.5" height="33"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tibet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-Lf-QFb">
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -1384,7 +1382,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlaceImageCell" id="dsW-s5-1Ph" customClass="PlaceImageCell" customModule="zaporozhye_app" customModuleProvider="target">
-                                        <frame key="frameInset" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -1486,7 +1484,6 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                             <constraint firstItem="H2J-Nr-gA0" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leading" id="A5g-dz-p8q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DZa-Dy-pBg" secondAttribute="trailing" id="AuE-en-2my"/>
                             <constraint firstItem="DZa-Dy-pBg" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leadingMargin" id="Bb6-gO-3Vb"/>
-                            <constraint firstItem="jwG-so-gMQ" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leading" constant="20" id="Dyg-xt-vaX"/>
                             <constraint firstAttribute="trailing" secondItem="qYl-7X-Xpy" secondAttribute="trailing" id="GEP-jN-1Zl"/>
                             <constraint firstItem="H2J-Nr-gA0" firstAttribute="top" secondItem="qYl-7X-Xpy" secondAttribute="bottom" id="H9O-3c-Vgf"/>
                             <constraint firstItem="qYl-7X-Xpy" firstAttribute="top" secondItem="erQ-Nz-ZSr" secondAttribute="top" id="IK1-fk-AVV"/>
@@ -1503,6 +1500,7 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                             <constraint firstItem="u9N-SS-Qga" firstAttribute="centerX" secondItem="erQ-Nz-ZSr" secondAttribute="centerX" id="XJi-7y-4ND"/>
                             <constraint firstItem="Lpd-db-GFG" firstAttribute="top" secondItem="QMS-hR-UqY" secondAttribute="bottom" constant="8" id="XcB-oi-yis"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="height" secondItem="ldT-2o-PNs" secondAttribute="height" id="YhZ-EE-cvY"/>
+                            <constraint firstItem="jwG-so-gMQ" firstAttribute="leading" secondItem="erQ-Nz-ZSr" secondAttribute="leadingMargin" id="aW9-Sc-jYe"/>
                             <constraint firstItem="DZa-Dy-pBg" firstAttribute="top" secondItem="H2J-Nr-gA0" secondAttribute="bottom" constant="8" id="bOx-gw-bdb"/>
                             <constraint firstItem="Iri-sf-bct" firstAttribute="height" secondItem="u9N-SS-Qga" secondAttribute="height" id="jwd-UO-WQs"/>
                             <constraint firstItem="QMS-hR-UqY" firstAttribute="top" secondItem="u9N-SS-Qga" secondAttribute="bottom" constant="8" id="nNT-HC-kiK"/>
@@ -1522,6 +1520,259 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYD-Vt-moy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4573.6000000000004" y="180.35982008995504"/>
+        </scene>
+        <!--Order FoodVC-->
+        <scene sceneID="Nyc-vr-fHv">
+            <objects>
+                <viewController id="uwB-u7-bgC" customClass="OrderFoodVC" customModule="zaporozhye_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yme-Wc-aUp"/>
+                        <viewControllerLayoutGuide type="bottom" id="voP-6a-fhw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y6g-7S-eta">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-Gl-4f2">
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y9Q-HH-kM3">
+                                    <size key="itemSize" width="178" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nfm-HN-Dcd" customClass="FoodCell" customModule="zaporozhye_app" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="0.0" width="178" height="154"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="154"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGA-S6-XVq" customClass="MaterialView" customModule="zaporozhye_app" customModuleProvider="target">
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fl8-KT-4P5">
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clocks" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-1l-XKu">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="18" id="Eri-KS-LM5"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="OKq-qX-fU8"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10:00 - 20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a2o-hC-q3O">
+                                                                    <frame key="frameInset" minX="31" minY="6.5" width="114" height="26"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="a2o-hC-q3O" firstAttribute="leading" secondItem="U8f-1l-XKu" secondAttribute="trailing" constant="5" id="10q-BV-CY9"/>
+                                                                <constraint firstItem="U8f-1l-XKu" firstAttribute="centerY" secondItem="Fl8-KT-4P5" secondAttribute="centerY" id="6cb-Qj-rtA"/>
+                                                                <constraint firstItem="a2o-hC-q3O" firstAttribute="centerY" secondItem="Fl8-KT-4P5" secondAttribute="centerY" id="Jvz-iS-fa7"/>
+                                                                <constraint firstAttribute="height" constant="38" id="mMd-AU-6Aw"/>
+                                                                <constraint firstItem="U8f-1l-XKu" firstAttribute="leading" secondItem="Fl8-KT-4P5" secondAttribute="leading" constant="8" id="nW8-wg-I0S"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WlX-aA-4gm"/>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="WlX-aA-4gm" firstAttribute="leading" secondItem="kGA-S6-XVq" secondAttribute="leading" constant="8" id="AvD-fy-1DJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Fl8-KT-4P5" secondAttribute="bottom" id="WOi-t5-F3b"/>
+                                                        <constraint firstItem="Fl8-KT-4P5" firstAttribute="leading" secondItem="kGA-S6-XVq" secondAttribute="leading" id="dEC-FD-wNQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Fl8-KT-4P5" secondAttribute="trailing" id="oOq-cN-06C"/>
+                                                        <constraint firstItem="WlX-aA-4gm" firstAttribute="top" secondItem="kGA-S6-XVq" secondAttribute="top" constant="8" id="qWj-qx-E1E"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WlX-aA-4gm" secondAttribute="trailing" constant="8" id="rTF-4C-P6s"/>
+                                                        <constraint firstItem="Fl8-KT-4P5" firstAttribute="top" secondItem="WlX-aA-4gm" secondAttribute="bottom" constant="8" id="sUY-7s-bj3"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="kGA-S6-XVq" firstAttribute="top" secondItem="Nfm-HN-Dcd" secondAttribute="top" constant="10" id="8fn-Gy-pvq"/>
+                                            <constraint firstItem="kGA-S6-XVq" firstAttribute="leading" secondItem="Nfm-HN-Dcd" secondAttribute="leading" constant="10" id="NzY-Jq-stY"/>
+                                            <constraint firstAttribute="bottom" secondItem="kGA-S6-XVq" secondAttribute="bottom" constant="10" id="a6R-mY-wT3"/>
+                                            <constraint firstAttribute="trailing" secondItem="kGA-S6-XVq" secondAttribute="trailing" constant="10" id="rlr-j2-fmd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgMain" destination="WlX-aA-4gm" id="LwT-ZI-3e2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxG-UK-gCq" customClass="MaterialView" customModule="zaporozhye_app" customModuleProvider="target">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90F-Dg-uVh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="KPl-gK-oac"/>
+                                            <constraint firstAttribute="width" constant="48" id="bc6-dB-a5a"/>
+                                        </constraints>
+                                        <state key="normal" image="down_button"/>
+                                        <connections>
+                                            <action selector="downBtnPressed:" destination="uwB-u7-bgC" eventType="touchUpInside" id="3hG-DN-6aS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-3p-Hkh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="ZVA-VX-Oow"/>
+                                            <constraint firstAttribute="width" constant="125" id="wv6-Sn-BLq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" red="0.63529411764705879" green="0.63529411764705879" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza, Sushi rolls, Burgers, Salads, Main dishes, Soups, Beverages, Dessert" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZi-Xd-ZKS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="yAn-aO-spx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvz-9k-keL" customClass="MiniRoundedView" customModule="zaporozhye_app" customModuleProvider="target">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykg-tl-1Ne">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16.799999237060547"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="website_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7RR-Lr-yLM">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="Ei3-Xg-5eq"/>
+                                                    <constraint firstAttribute="height" constant="22" id="HQv-Ds-c35"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="5Hr-Sg-InF"/>
+                                            <constraint firstItem="7RR-Lr-yLM" firstAttribute="centerY" secondItem="jvz-9k-keL" secondAttribute="centerY" id="7MZ-R2-TLo"/>
+                                            <constraint firstItem="7RR-Lr-yLM" firstAttribute="leading" secondItem="jvz-9k-keL" secondAttribute="leading" constant="8" id="JQ6-lX-UBx"/>
+                                            <constraint firstItem="ykg-tl-1Ne" firstAttribute="leading" secondItem="7RR-Lr-yLM" secondAttribute="trailing" constant="5" id="Krw-TG-bsh"/>
+                                            <constraint firstAttribute="width" constant="110" id="Vfc-w8-QQ9"/>
+                                            <constraint firstItem="ykg-tl-1Ne" firstAttribute="centerY" secondItem="jvz-9k-keL" secondAttribute="centerY" id="i5K-zm-WKI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hlt-1O-nFh" customClass="MiniRoundedView" customModule="zaporozhye_app" customModuleProvider="target">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOg-Cd-XD1">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="0OY-zM-aaL">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="g1J-MA-kvq"/>
+                                                    <constraint firstAttribute="width" constant="22" id="qKN-Ek-Inw"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="oOg-Cd-XD1" firstAttribute="leading" secondItem="0OY-zM-aaL" secondAttribute="trailing" constant="5" id="KEt-sc-iGv"/>
+                                            <constraint firstAttribute="width" constant="110" id="Uog-FM-gdC"/>
+                                            <constraint firstItem="0OY-zM-aaL" firstAttribute="centerY" secondItem="Hlt-1O-nFh" secondAttribute="centerY" id="kAT-jj-Z3D"/>
+                                            <constraint firstItem="oOg-Cd-XD1" firstAttribute="centerY" secondItem="Hlt-1O-nFh" secondAttribute="centerY" id="mlG-qk-Hk9"/>
+                                            <constraint firstAttribute="height" constant="35" id="udt-ku-X3k"/>
+                                            <constraint firstItem="0OY-zM-aaL" firstAttribute="leading" secondItem="Hlt-1O-nFh" secondAttribute="leading" constant="8" id="wUI-7x-NQ5"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR4-Ic-eF4">
+                                        <connections>
+                                            <action selector="websiteBtnPressed:" destination="uwB-u7-bgC" eventType="touchUpInside" id="8hf-A2-vsP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSu-T9-I2o">
+                                        <connections>
+                                            <action selector="orderBtnPressed:" destination="uwB-u7-bgC" eventType="touchUpInside" id="CJr-OV-nVD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="BR4-Ic-eF4" firstAttribute="width" secondItem="jvz-9k-keL" secondAttribute="width" id="3jR-MP-0FI"/>
+                                    <constraint firstItem="Hlt-1O-nFh" firstAttribute="width" secondItem="DSu-T9-I2o" secondAttribute="width" id="6pC-z5-cov"/>
+                                    <constraint firstAttribute="bottom" secondItem="jvz-9k-keL" secondAttribute="bottom" constant="8" id="N6T-pH-zBg"/>
+                                    <constraint firstItem="90F-Dg-uVh" firstAttribute="centerX" secondItem="gxG-UK-gCq" secondAttribute="centerX" id="ORp-iF-Tjl"/>
+                                    <constraint firstItem="YZi-Xd-ZKS" firstAttribute="top" secondItem="jzN-3p-Hkh" secondAttribute="bottom" constant="8" id="ZmI-CJ-5Aw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hlt-1O-nFh" secondAttribute="bottom" constant="8" id="a9v-xS-vnc"/>
+                                    <constraint firstAttribute="trailing" secondItem="YZi-Xd-ZKS" secondAttribute="trailing" constant="8" id="aV4-Oi-KkT"/>
+                                    <constraint firstItem="90F-Dg-uVh" firstAttribute="top" secondItem="gxG-UK-gCq" secondAttribute="top" constant="-24" id="bCu-0T-xWA"/>
+                                    <constraint firstItem="BR4-Ic-eF4" firstAttribute="centerX" secondItem="jvz-9k-keL" secondAttribute="centerX" id="bo5-T0-jf4"/>
+                                    <constraint firstAttribute="width" constant="320" id="cDY-3q-LNf"/>
+                                    <constraint firstAttribute="height" constant="125" id="dBr-eG-0Ww"/>
+                                    <constraint firstItem="jzN-3p-Hkh" firstAttribute="top" secondItem="gxG-UK-gCq" secondAttribute="top" constant="8" id="fRM-ZA-RdF"/>
+                                    <constraint firstItem="Hlt-1O-nFh" firstAttribute="height" secondItem="DSu-T9-I2o" secondAttribute="height" id="gBb-e7-h1H"/>
+                                    <constraint firstItem="YZi-Xd-ZKS" firstAttribute="leading" secondItem="gxG-UK-gCq" secondAttribute="leading" constant="8" id="iXo-bf-bEn"/>
+                                    <constraint firstItem="Hlt-1O-nFh" firstAttribute="centerY" secondItem="DSu-T9-I2o" secondAttribute="centerY" id="n2E-FD-GEk"/>
+                                    <constraint firstItem="Hlt-1O-nFh" firstAttribute="centerX" secondItem="gxG-UK-gCq" secondAttribute="centerX" multiplier="1.5" id="o6Y-xh-i82"/>
+                                    <constraint firstItem="BR4-Ic-eF4" firstAttribute="centerY" secondItem="jvz-9k-keL" secondAttribute="centerY" id="q7n-wg-e7x"/>
+                                    <constraint firstItem="Hlt-1O-nFh" firstAttribute="centerX" secondItem="DSu-T9-I2o" secondAttribute="centerX" id="qyR-Wr-0WM"/>
+                                    <constraint firstItem="jvz-9k-keL" firstAttribute="centerX" secondItem="gxG-UK-gCq" secondAttribute="centerX" multiplier="0.5" id="tUZ-KY-1ln"/>
+                                    <constraint firstItem="jzN-3p-Hkh" firstAttribute="leading" secondItem="gxG-UK-gCq" secondAttribute="leading" constant="8" id="w8W-bE-ejy"/>
+                                    <constraint firstItem="BR4-Ic-eF4" firstAttribute="height" secondItem="jvz-9k-keL" secondAttribute="height" id="x8Z-eb-WDO"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="BRk-2L-qFn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="P5P-qu-8LG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKC-wv-q27">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="5pd-JC-cPf"/>
+                                    <constraint firstAttribute="width" constant="150" id="iMc-R5-bZV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVi-hP-cj8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="bgq-qP-4XH"/>
+                                    <constraint firstAttribute="height" constant="20" id="v44-cT-Jzp"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="8cm-qi-pIv" eventType="touchUpInside" id="Azl-Nw-AIE"/>
+                                    <action selector="backBtnPressed:" destination="uqk-fT-joC" eventType="touchUpInside" id="Rf4-o4-f5R"/>
+                                    <action selector="backBtnPressed:" destination="uwB-u7-bgC" eventType="touchUpInside" id="pqx-YN-oHO"/>
+                                    <action selector="backBtnPressed:" destination="9tN-Az-iDQ" eventType="touchUpInside" id="zkP-vd-507"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63529411759999999" green="0.63529411759999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LKC-wv-q27" firstAttribute="centerY" secondItem="kVi-hP-cj8" secondAttribute="centerY" id="7Hx-ma-Hxw"/>
+                            <constraint firstAttribute="trailing" secondItem="gxG-UK-gCq" secondAttribute="trailing" id="C7f-gb-vEF"/>
+                            <constraint firstItem="voP-6a-fhw" firstAttribute="top" secondItem="gxG-UK-gCq" secondAttribute="bottom" id="GSn-i8-6fx"/>
+                            <constraint firstItem="LKC-wv-q27" firstAttribute="centerX" secondItem="Y6g-7S-eta" secondAttribute="centerX" id="IRI-p3-cio"/>
+                            <constraint firstItem="gxG-UK-gCq" firstAttribute="centerX" secondItem="Y6g-7S-eta" secondAttribute="centerX" id="L5G-e8-53T"/>
+                            <constraint firstItem="voP-6a-fhw" firstAttribute="top" secondItem="GaS-Gl-4f2" secondAttribute="bottom" id="MAe-sg-fyM"/>
+                            <constraint firstItem="gxG-UK-gCq" firstAttribute="centerX" secondItem="Y6g-7S-eta" secondAttribute="centerX" id="TmH-el-DCR"/>
+                            <constraint firstItem="BRk-2L-qFn" firstAttribute="leading" secondItem="Y6g-7S-eta" secondAttribute="leading" id="X4z-ib-GI5"/>
+                            <constraint firstItem="gxG-UK-gCq" firstAttribute="leading" secondItem="Y6g-7S-eta" secondAttribute="leading" id="agr-om-1xG"/>
+                            <constraint firstItem="kVi-hP-cj8" firstAttribute="leading" secondItem="Y6g-7S-eta" secondAttribute="leadingMargin" id="c8I-nc-a8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="GaS-Gl-4f2" secondAttribute="trailing" id="pZb-2d-mdj"/>
+                            <constraint firstItem="BRk-2L-qFn" firstAttribute="top" secondItem="Y6g-7S-eta" secondAttribute="top" id="rml-eZ-fag"/>
+                            <constraint firstItem="GaS-Gl-4f2" firstAttribute="top" secondItem="BRk-2L-qFn" secondAttribute="bottom" id="sz8-Dp-17D"/>
+                            <constraint firstAttribute="trailing" secondItem="BRk-2L-qFn" secondAttribute="trailing" id="wCV-op-bVZ"/>
+                            <constraint firstItem="GaS-Gl-4f2" firstAttribute="top" secondItem="LKC-wv-q27" secondAttribute="bottom" constant="5" id="zBh-gS-68f"/>
+                            <constraint firstItem="GaS-Gl-4f2" firstAttribute="leading" secondItem="Y6g-7S-eta" secondAttribute="leading" id="zrE-V3-FQD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="GaS-Gl-4f2" id="G7F-3T-MeZ"/>
+                        <outlet property="informationView" destination="gxG-UK-gCq" id="lgg-ma-NAr"/>
+                        <outlet property="menuLbl" destination="YZi-Xd-ZKS" id="blb-xh-xWx"/>
+                        <outlet property="nameLbl" destination="jzN-3p-Hkh" id="aWI-bs-FcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hra-An-G4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576.875" y="920.07042253521126"/>
         </scene>
         <!--TaxiVC-->
         <scene sceneID="K3D-qE-Amr">
@@ -1601,10 +1852,12 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
     </scenes>
     <resources>
         <image name="back" width="64" height="64"/>
+        <image name="clocks" width="15" height="16"/>
         <image name="cloud_download" width="512" height="512"/>
         <image name="cloud_rain" width="512" height="512"/>
         <image name="cloud_sun" width="512" height="512"/>
         <image name="compass" width="566" height="566"/>
+        <image name="down_button" width="54" height="54"/>
         <image name="drink" width="65" height="100"/>
         <image name="eat" width="80" height="86"/>
         <image name="header" width="375" height="50"/>
@@ -1617,11 +1870,13 @@ Zaporozhye gained independence with all the rest of Ukraine in 1991.</string>
         <image name="thermometer" width="512" height="512"/>
         <image name="walk" width="75" height="105"/>
         <image name="weather_bg" width="1300" height="1300"/>
+        <image name="website_icon" width="96" height="96"/>
         <image name="wind_SW" width="64" height="64"/>
         <image name="zap" width="1050" height="740"/>
         <image name="zap2" width="640" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="agj-mj-ak2"/>
+        <segue reference="HMU-8F-xQ2"/>
     </inferredMetricsTieBreakers>
 </document>

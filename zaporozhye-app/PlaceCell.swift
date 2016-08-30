@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class PlaceCell: UICollectionViewCell {
     
@@ -24,7 +25,7 @@ class PlaceCell: UICollectionViewCell {
             let ref = FIRStorage.storage().reference().child(place.imgPaths[0])
             ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
-                    print("Unable to download image from Firebase storage: \(error?.debugDescription)")
+                    print("Unable to download image from Firebase storage: \(error)")
                 } else {
                     print("Image downloaded from Firebase storage")
                     if let imgData = data {

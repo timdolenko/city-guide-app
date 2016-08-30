@@ -11,7 +11,7 @@ import Foundation
 import Firebase
 
 class TaxiVC: UIViewController {
-    static private let kTableViewCellReuseIdentifier = "TaxiCell"
+    static let kTableViewCellReuseIdentifier = "TaxiCell"
     @IBOutlet private weak var tableView: FZAccordionTableView!
     
     var taxiArray = [Taxi]()
@@ -21,8 +21,10 @@ class TaxiVC: UIViewController {
         
         if DataService.ds.taxiArray.count > 0 {
             taxiArray = DataService.ds.taxiArray
+        } else {
+            //Place to start animation
+            NotificationCenter.default.addObserver(self, selector: #selector(TaxiVC.updateUI), name: Notification.Name("dataLoaded"), object: nil)
         }
-        
         
         tableView.allowMultipleSectionsOpen = true
         tableView.register(UINib(nibName: "TaxiCell",bundle: nil), forCellReuseIdentifier: TaxiVC.kTableViewCellReuseIdentifier)
@@ -32,15 +34,14 @@ class TaxiVC: UIViewController {
     @IBAction func backBtnPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
-}
-
-// MARK: - Extra Overrides - 
-
-extension TaxiVC {
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    
+    func updateUI() {
+        //stop animation
+        taxiArray = DataService.ds.taxiArray
+        tableView.reloadData()
     }
 }
+
 
 // MARK: - <UITableViewDataSource> / <UITableViewDelegate> -
 
