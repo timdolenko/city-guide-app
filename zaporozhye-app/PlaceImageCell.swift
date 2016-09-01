@@ -15,7 +15,7 @@ class PlaceImageCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     
     func configureCell(imgPath: String) {
-        if let img = DataService.ds.imageForPath(path: imgPath) {
+        if let img = DataService.ds.imageFor(path: imgPath) {
             self.image.image = img
         } else {
             let ref = FIRStorage.storage().reference().child(imgPath)

@@ -19,7 +19,7 @@ class PlacesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLlb.text = type
-        placesArray = DataService.ds.getArrayOf(type: type)
+        placesArray = DataService.ds.getPlaceArrayOf(type: type)
         collectionView.reloadData()
 
         collectionView.delegate = self

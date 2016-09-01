@@ -42,7 +42,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVAc
         case 1:
             performSegue(withIdentifier: SEGUE_TAXIVC, sender: nil)
         case 2:
-            UIApplication.shared.openURL(URL(string: "http://www.city-drive.com.ua/")!)
+            performSegue(withIdentifier: SEGUE_ORDER_FOODVC, sender: nil)
         case 3:
             performSegue(withIdentifier: SEGUE_PLACESVC_FROM_MENU, sender: KEY_HOTELS)
         case 4:

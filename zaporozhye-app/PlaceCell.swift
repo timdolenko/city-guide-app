@@ -19,7 +19,7 @@ class PlaceCell: UICollectionViewCell {
     func configureCell(place: Place) {
         placeLbl.text = place.name
         
-        if let img = DataService.ds.imageForPath(path: place.imgPaths[0]) {
+        if let img = DataService.ds.imageFor(path: place.imgPaths[0]) {
             self.placeImg.image = img
         } else {
             let ref = FIRStorage.storage().reference().child(place.imgPaths[0])

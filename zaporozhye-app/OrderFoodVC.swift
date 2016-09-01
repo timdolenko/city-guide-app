@@ -15,23 +15,22 @@ class OrderFoodVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var menuLbl: UILabel!
     
-    var foodArray = [Place]()
+    var foodArray = [Food]()
+    var infoViewIsHidden: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIView.animate(withDuration: 0.8, delay: 1.0, options: .curveEaseOut, animations: {
-            
-            var infoFrame = self.informationView.frame
-            infoFrame.origin.y -= infoFrame.size.height
-            
-            self.informationView.frame = infoFrame
-            
-        }) { finished in
-            print("Finished")
-        }
-
+        foodArray = DataService.ds.foodArray
+        
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        var infoFrame = self.informationView.frame
+        infoFrame.origin.y += infoFrame.size.height + 24
+        self.informationView.frame = infoFrame
     }
     
     
@@ -44,8 +43,11 @@ class OrderFoodVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        return UICollectionViewCell()
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCell", for: indexPath) as? FoodCell {
+            cell.configureCell(food: foodArray[indexPath.row])
+            return cell
+        }
+        return FoodCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -56,10 +58,11 @@ class OrderFoodVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
 
     @IBAction func downBtnPressed(_ sender: AnyObject) {
+        self.infoViewIsHidden = true
         UIView.animate(withDuration: 0.6, delay: 0.0, options: .curveEaseOut, animations: {
             
             var infoFrame = self.informationView.frame
-            infoFrame.origin.y += infoFrame.size.height
+            infoFrame.origin.y += infoFrame.size.height + 24
             
             self.informationView.frame = infoFrame
             
@@ -69,7 +72,20 @@ class OrderFoodVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
+        if infoViewIsHidden {
+            infoViewIsHidden = false
+        UIView.animate(withDuration: 0.8, delay: 0.0, options: .curveEaseOut, animations: {
+            
+            var infoFrame = self.informationView.frame
+            infoFrame.origin.y -= infoFrame.size.height + 24
+            
+            self.informationView.frame = infoFrame
+            
+        }) { finished in
+            print("Finished")
+        }
+        }
+        //dismiss(animated: true, completion: nil)
     }
     
     @IBAction func websiteBtnPressed(_ sender: AnyObject) {

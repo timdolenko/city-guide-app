@@ -19,6 +19,7 @@ let KEY_DRINK = "Drink"
 let KEY_SMOKE = "Smoke"
 let KEY_WALK = "Walk"
 let KEY_HOTELS = "Hotels"
+let KEY_FOOD = "Food"
 
 //Colors
 let SHADOW_COLOR: CGFloat = 0.0 / 255.0
@@ -33,4 +34,5 @@ let SEGUE_PLACESMENUVC = "PlacesMenuVC"
 let SEGUE_PLACESVC = "PlacesVC"
 let SEGUE_PLACEVC = "PlaceVC"
 let SEGUE_PLACESVC_FROM_MENU = "PlacesVCfromMenu"
+let SEGUE_ORDER_FOODVC = "OrderFoodVC"
 

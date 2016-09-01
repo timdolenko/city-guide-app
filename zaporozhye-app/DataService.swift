@@ -63,14 +63,17 @@ class DataService {
     
     var taxiArray = [Taxi]()
     
+    var foodArray = [Food]()
+    
     func getDataFromFirebase() {
         
         self.getLocalDataOf(type: KEY_PLACES)
         self.getLocalDataOf(type: KEY_HOTELS)
         self.getLocalDataOf(type: KEY_MALLS)
         self.getLocalDataOf(type: KEY_TAXI)
+        self.getLocalDataOf(type: KEY_FOOD)
         
-        if placesArray.count == 0 || hotelsArray.count == 0 || mallsArray.count == 0 || taxiArray.count == 0 {
+        if placesArray.count == 0 || hotelsArray.count == 0 || mallsArray.count == 0 || taxiArray.count == 0 || foodArray.count == 0 {
             DataService.ds.REF_BASE.observe(.value, with: { dataDict in
                 if let dicts = dataDict.children.allObjects as? [FIRDataSnapshot] {
                     
@@ -95,6 +98,12 @@ class DataService {
                             self.mallsArray = DataService.ds.getPlacesArrayFrom(snapshot: dict)
                             DataService.ds.saveToLocalData(arrayOfPlaces: self.mallsArray, of: KEY_MALLS)
                         }
+                        
+                        if dict.key == "Food" {
+                            print(dict.value)
+                            self.foodArray = DataService.ds.getFoodArrayFrom(snapshot: dict)
+                            DataService.ds.saveToLocalData(arrayOfFood: self.foodArray)
+                        }
                     }
                     
                     
@@ -112,23 +121,28 @@ class DataService {
             switch type {
             case KEY_PLACES:
                 if let placesArray = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Place] {
-                    print("SISPO: Successfully get places array of type \(type) from local data.")
+                    print("SISPO: Successfully got places array of type \(type) from local data.")
                     self.placesArray = placesArray
                 }
             case KEY_HOTELS:
                 if let hotelsArray = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Place] {
-                    print("SISPO: Successfully get places array of type \(type) from local data.")
+                    print("SISPO: Successfully got places array of type \(type) from local data.")
                     self.hotelsArray = hotelsArray
                 }
             case KEY_MALLS:
                 if let mallsArray = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Place] {
-                    print("SISPO: Successfully get places array of type \(type) from local data.")
+                    print("SISPO: Successfully got places array of type \(type) from local data.")
                     self.mallsArray = mallsArray
                 }
             case KEY_TAXI:
                 if let taxiArray = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Taxi] {
-                    print("SISPO: Successfully get places array of type \(type) from local data.")
+                    print("SISPO: Successfully got places array of type \(type) from local data.")
                     self.taxiArray = taxiArray
+                }
+            case KEY_FOOD:
+                if let foodArray = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Food] {
+                    print("SISPO: Successfully got food array")
+                    self.foodArray = foodArray
                 }
             default:
                 print("SISPO: Error occured")
@@ -151,7 +165,7 @@ class DataService {
                 print("SNAP: \(snap)")
                 
                 if let placeDict = snap.value as? Dictionary<String, AnyObject> {
-                    let place = DataService.ds.convertSnapToPlaceObject(snapData: placeDict)
+                    let place = DataService.ds.getPlaceObjectFrom(snapData: placeDict)
                     array.append(place)
                 }
             }
@@ -163,6 +177,65 @@ class DataService {
         }
     }
     
+    func getFoodArrayFrom(snapshot: FIRDataSnapshot) -> [Food] {
+        if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            
+            var array = [Food]()
+            
+            for snap in snapshots {
+                print("SNAP: \(snap)")
+                
+                if let foodDict = snap.value as? Dictionary<String, AnyObject> {
+                    let food = DataService.ds.getFoodObjectFrom(snap: foodDict)
+                    array.append(food)
+                }
+                
+            }
+            
+            return array
+            
+        } else {
+            print("SISPO: Error occured while getting food array from snapshot")
+            return [Food]()
+        }
+    }
+    
+    func getTaxiArrayFrom(snapshot: FIRDataSnapshot) -> [Taxi] {
+        if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            
+            var array = [Taxi]()
+            
+            for snap in snapshots {
+                print("SNAP: \(snap)")
+                
+                if let taxiDict = snap.value as? Dictionary<String, AnyObject> {
+                    let taxi = DataService.ds.getTaxiObjectFrom(snapData: taxiDict)
+                    array.append(taxi)
+                }
+            }
+            
+            return array
+            
+        } else {
+            print("SISPO: Error occured while getting taxi array from snapshot")
+            return [Taxi]()
+        }
+    }
+    
+    func getTaxiObjectFrom(snapData: Dictionary<String,AnyObject>) -> Taxi {
+        if let name = snapData["name"] as? String,
+            let phones = snapData["phones"] as? Array<String> {
+            let taxi = Taxi(phones: phones, name: name)
+            print("SISPO: Successfully downcasted taxi snapData with name: \(name)")
+            return taxi
+        } else {
+            print("SISPO: Error while downcasting taxi snapData")
+        }
+        
+        
+        return Taxi(phones: [""], name: "")
+    }
+    
     func saveToLocalData(arrayOfPlaces: [Place], of type: String) {
         let placesData = NSKeyedArchiver.archivedData(withRootObject: arrayOfPlaces)
         UserDefaults.standard.set(placesData, forKey: type)
@@ -171,7 +244,22 @@ class DataService {
         
     }
     
-    func convertSnapToPlaceObject(snapData: Dictionary<String,AnyObject>) -> Place {
+    func saveToLocalData(arrayOfFood: [Food]) {
+        let foodData = NSKeyedArchiver.archivedData(withRootObject: arrayOfFood)
+        UserDefaults.standard.set(foodData, forKey: KEY_FOOD)
+        UserDefaults.standard.synchronize()
+        print("SISPO: Successfully saved array of food")
+    }
+    
+    func saveToLocalData(arrayOfTaxi: [Taxi]) {
+        let taxiData = NSKeyedArchiver.archivedData(withRootObject: arrayOfTaxi)
+        UserDefaults.standard.set(taxiData, forKey: KEY_TAXI)
+        UserDefaults.standard.synchronize()
+        print("SISPO: Successfully saved array of taxi")
+        
+    }
+    
+    func getPlaceObjectFrom(snapData: Dictionary<String,AnyObject>) -> Place {
         if let name = snapData["name"] as? String,
         let placeDesc = snapData["description"] as? String,
         let phone = snapData["phone"] as? String,
@@ -214,7 +302,34 @@ class DataService {
         return Place()
     }
     
-    func getArrayOf(type: String) -> [Place] {
+    func getFoodObjectFrom(snap: Dictionary<String,AnyObject>) -> Food {
+        if let name = snap["name"] as? String,
+        let imgPath = snap["imgPath"] as? String,
+        let menu = snap["menu"] as? String,
+        let website = snap["website"] as? String,
+        let phones = snap["phones"] as? [String],
+        let time = snap["time"] as? Dictionary<String, Int> {
+            
+            print("SISPO: Successfully downcated dict of type Food")
+            if let open = time["open"],
+                let close = time["close"] {
+                print("SISPO: Successfully get open and close time")
+                
+                
+                if let websiteUrl = URL(string: website) {
+                    print("SISPO: Successfully created food website url")
+                    
+                    let food = Food(name: name, menu: menu, phones: phones, imgPath: imgPath, timeOpen: open, timeClose: close, website: websiteUrl)
+                    return food
+                }
+            }
+            
+            
+        }
+        return Food()
+    }
+    
+    func getPlaceArrayOf(type: String) -> [Place] {
         
         var filteredPlaces = [Place]()
             
@@ -262,7 +377,7 @@ class DataService {
         }
     }
     
-    func imageForPath(path: String) -> UIImage? {
+    func imageFor(path: String) -> UIImage? {
         let fullPath = documentsURLForFileName(name: path)
         do {
             let imgData = try Data(contentsOf: fullPath)
@@ -280,56 +395,6 @@ class DataService {
     func documentsURLForFileName(name: String) -> URL {
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(name)
         return fileURL
-    }
-    
-    
-    
-// MARK: - Taxi Service -
-    
-    
-    
-    func getTaxiArrayFrom(snapshot: FIRDataSnapshot) -> [Taxi] {
-        if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-            
-            var array = [Taxi]()
-            
-            for snap in snapshots {
-                print("SNAP: \(snap)")
-                
-                if let taxiDict = snap.value as? Dictionary<String, AnyObject> {
-                    let taxi = DataService.ds.convertSnapToTaxiObject(snapData: taxiDict)
-                    array.append(taxi)
-                }
-            }
-            
-            return array
-            
-        } else {
-            print("SISPO: Error occured while getting taxi array from snapshot")
-            return [Taxi]()
-        }
-    }
-
-    func convertSnapToTaxiObject(snapData: Dictionary<String,AnyObject>) -> Taxi {
-        if let name = snapData["name"] as? String,
-            let phones = snapData["phones"] as? Array<String> {
-            let taxi = Taxi(phones: phones, name: name)
-            print("SISPO: Successfully downcasted taxi snapData with name: \(name)")
-            return taxi
-        } else {
-            print("SISPO: Error while downcasting taxi snapData")
-        }
-        
-        
-        return Taxi(phones: [""], name: "")
-    }
-    
-    func saveToLocalData(arrayOfTaxi: [Taxi]) {
-        let taxiData = NSKeyedArchiver.archivedData(withRootObject: arrayOfTaxi)
-        UserDefaults.standard.set(taxiData, forKey: KEY_TAXI)
-        UserDefaults.standard.synchronize()
-        print("SISPO: Successfully saved array of taxi")
-        
     }
     
     //Call service
