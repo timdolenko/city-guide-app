@@ -9,7 +9,7 @@
 import UIKit
 
 class AccordionHeaderView: FZAccordionTableViewHeaderView {
-    static let kDefaultAccordionHeaderViewHeight: CGFloat = 70.0;
+    static let kDefaultAccordionHeaderViewHeight: CGFloat = 80.0;
     static let kAccordionHeaderViewReuseIdentifier = "AccordionHeaderViewReuseIdentifier";
     
     @IBOutlet weak var taxiNameLbl: UILabel!

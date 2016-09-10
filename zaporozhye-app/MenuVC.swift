@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable {
+class MenuVC: ProjectVC, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,13 +17,14 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVAc
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.register(UINib(nibName: "MenuCell",bundle: nil), forCellReuseIdentifier: "MenuCell")
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     func isDataAvailable() -> Bool {
-        if DataService.ds.placesArray.count > 0 && DataService.ds.hotelsArray.count > 0 && DataService.ds.mallsArray.count > 0 {
+        if DataService.ds.placesArray.count > 0 && DataService.ds.hotelsArray.count > 0 && DataService.ds.mallsArray.count > 0 && DataService.ds.taxiArray.count > 0 {
             return true
         } else {
             return false
@@ -118,10 +119,6 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVAc
                 print("SISPO: Error in places ViewController")
             }
         }
-    }
-
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
     }
     
 }

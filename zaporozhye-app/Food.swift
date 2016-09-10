@@ -58,8 +58,10 @@ class Food: NSObject, NSCoding {
     
     func isFoodServiceOpen() -> Bool {
         if Date.timeIsBetween(startHour: timeOpen, endHour: timeClose) {
+            print("SISPO: Food service \(name) is open")
             return true
         } else {
+            print("SISPO: Food service \(name) is closed")
             return false
         }
     }

@@ -9,19 +9,11 @@
 import UIKit
 import Firebase
 
-class PlacesMenuVC: UIViewController {
-    
-    var placesArray = [Place]()
-    var isPlaceArrayReady = false
+class PlacesMenuVC: ProjectVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
 
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
     }
     
     
@@ -42,7 +34,7 @@ class PlacesMenuVC: UIViewController {
     }
 
     @IBAction func questionBtnPressed(_ sender: AnyObject) {
-        
+        performSegue(withIdentifier: SEGUE_QUESTVC, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

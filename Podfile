@@ -16,4 +16,7 @@ target 'zaporozhye-app' do
     pod 'NVActivityIndicatorView',
     :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git',
     :branch => 'swift3'
+    pod 'SCLAlertView',
+    :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git',
+    :branch => 'swift3'
 end

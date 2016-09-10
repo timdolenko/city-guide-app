@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlacesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PlacesVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLlb: UILabel!
@@ -64,10 +64,6 @@ class PlacesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
                 }
             }
         }
-    }
-    
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
     }
 
 }

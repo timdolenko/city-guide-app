@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class WeatherVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var tempType = "C"
     
@@ -19,6 +19,8 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @IBOutlet weak var windDirectImg: UIImageView!
     @IBOutlet weak var tempLbl: UILabel!
     @IBOutlet weak var rainVolumeLbl: UILabel!
+    
+    var selectedDay = Day()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +61,18 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         showWeather((indexPath as NSIndexPath).row)
     }
 
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func tempChangeBtnPressed(_ sender: AnyObject) {
+        if tempType == "C" {
+            tempType = "F"
+            tempLbl.text = selectedDay.tempF
+            collectionView.reloadData()
+        } else {
+            tempType = "C"
+            tempLbl.text = selectedDay.tempC
+            collectionView.reloadData()
+        }
     }
-
+    
     @IBAction func refreshBtnPressed(_ sender: AnyObject) {
         reloadWeather()
     }
@@ -77,11 +87,15 @@ class WeatherVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     }
     
     func showWeather(_ num: Int) {
-        let selectedDay = WeatherService.instance.loadedForecast[num]
+        selectedDay = WeatherService.instance.loadedForecast[num]
         mainWeatherImg.image = UIImage(named: "\(WeatherService.instance.getMainImagePath(selectedDay.weatherId))")
         mainWeatherLbl.text = selectedDay.weatherDesc.capitalized
         windSpeedLbl.text = selectedDay.windSpeed
-        tempLbl.text = selectedDay.tempC
+        if tempType == "C" {
+            tempLbl.text = selectedDay.tempC
+        } else {
+            tempLbl.text = selectedDay.tempF
+        }
         rainVolumeLbl.text = selectedDay.rainVolume
         windDirectImg.image = UIImage(named: "\(WeatherService.instance.getWindImagePath(selectedDay.windDirect))")
         

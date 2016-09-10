@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,11 +15,11 @@
                 <frame key="frameInset" width="375" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZV-at-dgL" customClass="MaterialView" customModule="zaporozhye_app" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZV-at-dgL">
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4Uz-ko-5Td">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_green" translatesAutoresizingMaskIntoConstraints="NO" id="7Je-Rl-rrK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="7Je-Rl-rrK">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="Gem-P9-icq"/>
                                             <constraint firstAttribute="width" constant="20" id="w6J-Fp-lz2"/>
@@ -30,20 +30,25 @@
                                             <constraint firstAttribute="height" constant="27" id="g6n-ms-vd5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.2019396551724138" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Uz-ko-5Td" firstAttribute="centerY" secondItem="mZV-at-dgL" secondAttribute="centerY" id="0Om-Gn-VHZ"/>
                             <constraint firstItem="4Uz-ko-5Td" firstAttribute="centerX" secondItem="mZV-at-dgL" secondAttribute="centerX" id="BEH-Za-z3Z"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="mZV-at-dgL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AxV-my-FMO"/>
                     <constraint firstAttribute="trailing" secondItem="mZV-at-dgL" secondAttribute="trailing" constant="10" id="Kvd-4O-nt1"/>
@@ -51,6 +56,7 @@
                     <constraint firstItem="mZV-at-dgL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oEQ-V7-Xvf"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="phoneLbl" destination="bh5-cm-3B5" id="eVJ-c2-64I"/>
             </connections>
@@ -58,6 +64,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="phone_green" width="34" height="33"/>
+        <image name="phone" width="34" height="33"/>
     </resources>
 </document>

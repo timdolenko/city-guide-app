@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Firebase
 
-class TaxiVC: UIViewController {
+class TaxiVC: ProjectVC {
     static let kTableViewCellReuseIdentifier = "TaxiCell"
     @IBOutlet private weak var tableView: FZAccordionTableView!
     
@@ -18,27 +18,11 @@ class TaxiVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if DataService.ds.taxiArray.count > 0 {
-            taxiArray = DataService.ds.taxiArray
-        } else {
-            //Place to start animation
-            NotificationCenter.default.addObserver(self, selector: #selector(TaxiVC.updateUI), name: Notification.Name("dataLoaded"), object: nil)
-        }
+        taxiArray = DataService.ds.taxiArray
         
         tableView.allowMultipleSectionsOpen = true
         tableView.register(UINib(nibName: "TaxiCell",bundle: nil), forCellReuseIdentifier: TaxiVC.kTableViewCellReuseIdentifier)
         tableView.register(UINib(nibName: "AccordionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: AccordionHeaderView.kAccordionHeaderViewReuseIdentifier)
-    }
-    
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func updateUI() {
-        //stop animation
-        taxiArray = DataService.ds.taxiArray
-        tableView.reloadData()
     }
 }
 
@@ -108,23 +92,6 @@ extension TaxiVC : UITableViewDelegate, UITableViewDataSource {
 // MARK: - <FZAccordionTableViewDelegate> -
 
 extension TaxiVC : FZAccordionTableViewDelegate {
-    
-
-    func tableView(_ tableView: FZAccordionTableView, willOpenSection section: Int, withHeader header: UITableViewHeaderFooterView) {
-        
-    }
-    
-    func tableView(_ tableView: FZAccordionTableView, didOpenSection section: Int, withHeader header: UITableViewHeaderFooterView) {
-        
-    }
-    
-    func tableView(_ tableView: FZAccordionTableView, willCloseSection section: Int, withHeader header: UITableViewHeaderFooterView) {
-        
-    }
-    
-    func tableView(_ tableView: FZAccordionTableView, didCloseSection section: Int, withHeader header: UITableViewHeaderFooterView) {
-        
-    }
     
     func tableView(_ tableView: FZAccordionTableView, canInteractWithHeaderAtSection section: Int) -> Bool {
         return true

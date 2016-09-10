@@ -10,16 +10,6 @@ import Foundation
 
 extension Date {
     
-    func dateAt(hours: Int, minutes: Int) -> Date {
-        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-        var dateComponents = DateComponents()
-        dateComponents.hour = hours
-        dateComponents.minute = minutes
-        dateComponents.second = 0
-        let newDate = calendar.date(from: dateComponents)
-        return newDate!
-    }
-    
     private static func timeAsIntegerFrom(date: Date) -> Int {
         var currentCal = NSCalendar.current
         currentCal.timeZone = NSTimeZone.local

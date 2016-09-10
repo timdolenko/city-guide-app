@@ -18,9 +18,9 @@ class FoodCell: UICollectionViewCell {
     func configureCell(food: Food) {
         
         if food.isFoodServiceOpen() {
-            bottomView.backgroundColor = UIColor(red:0.49, green:0.83, blue:0.13, alpha:1.0)
+            bottomView.backgroundColor = GREEN_COLOR
         } else {
-            bottomView.backgroundColor = UIColor(red:0.82, green:0.01, blue:0.11, alpha:1.0)
+            bottomView.backgroundColor = RED_COLOR
         }
         
         timeLbl.text = "\(food.timeOpen):00 - \(food.timeClose):00"

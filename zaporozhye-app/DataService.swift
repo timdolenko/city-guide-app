@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import FirebaseStorage
+import MapKit
 
 let ref = FIRDatabase.database().reference()
 let STORAGE_BASE = FIRStorage.storage().reference()
@@ -266,7 +267,7 @@ class DataService {
         let imgPaths = snapData["imgPaths"] as? Array<String>,
             let geoLoc = snapData["geoLoc"] as? Dictionary<String,Double> {
             
-            print("SISPO: Successfully downcasted snapData")
+            print("SISPO: Successfully downcasted snapData with name: \(name)")
             
             if let lat = geoLoc["lat"], let lon = geoLoc["lon"] {
                 
@@ -385,7 +386,7 @@ class DataService {
             print("SISPO: Successfully get image for path: \(path)")
             return image
         } catch {
-            print("SISPO: Error occured: \(error), while getting image for path \(path)")
+            print("SISPO: Couldn't find image for path \(path)")
         }
         
         return nil
@@ -397,7 +398,7 @@ class DataService {
         return fileURL
     }
     
-    //Call service
+// MARK: - Call service -
     
     func call(phone: String) {
         
@@ -422,6 +423,24 @@ class DataService {
         }
     }
     
+// MARK: - GPS Service -
     
+    func openMapForPlace(lat: Double, lon: Double, name: String) {
+        let latitude: CLLocationDegrees = lat
+        let longitude: CLLocationDegrees = lon
+        
+        let regionDistance: CLLocationDistance = 2000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "\(name)"
+        mapItem.openInMaps(launchOptions: options)
+        print("SISPO: Open map with lat: \(lat) and long: \(lon)")
+    }
 }
 

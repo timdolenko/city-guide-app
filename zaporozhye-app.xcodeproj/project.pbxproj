@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C0210EC1D2C1C2C00989062 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0210EB1D2C1C2C00989062 /* AboutVC.swift */; };
 		3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0678021D4256E90046F6A2 /* WeatherVC.swift */; };
 		3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0678061D4280DF0046F6A2 /* WeatherCell.swift */; };
 		3C0678091D42819F0046F6A2 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0678081D42819F0046F6A2 /* Day.swift */; };
@@ -37,19 +36,26 @@
 		3C51D0E31D6B4C2D005A77A7 /* TaxiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */; };
 		3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E41D6B5097005A77A7 /* MaterialView.swift */; };
 		3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */; };
+		3C52A79F1D7B3AC3006864ED /* CAGradientLayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52A79E1D7B3AC3006864ED /* CAGradientLayerExtension.swift */; };
 		3C6950E21D71BD62007BFCBA /* PlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6950E11D71BD62007BFCBA /* PlaceVC.swift */; };
 		3C6950E71D71E260007BFCBA /* PlaceImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */; };
+		3C6B64961D7C4FA8005C0F4B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B64951D7C4FA8005C0F4B /* CircleView.swift */; };
+		3C6B64981D7C51A4005C0F4B /* CircleButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B64971D7C51A4005C0F4B /* CircleButtonWithShadow.swift */; };
+		3C6B649A1D7C54CA005C0F4B /* PlacesMenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B64991D7C54CA005C0F4B /* PlacesMenuButtonView.swift */; };
+		3C6B649C1D7C70E9005C0F4B /* RandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B649B1D7C70E9005C0F4B /* RandVC.swift */; };
+		3C6B649F1D7CAEB4005C0F4B /* ProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B649E1D7CAEB4005C0F4B /* ProjectVC.swift */; };
+		3C6B64A11D7CB1F8005C0F4B /* QuestShadowGreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B64A01D7CB1F8005C0F4B /* QuestShadowGreenView.swift */; };
 		3C755BB41D75CC070079C879 /* OrderFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB31D75CC070079C879 /* OrderFoodVC.swift */; };
 		3C755BB61D75E4B40079C879 /* MiniRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */; };
 		3C755BB81D75EC720079C879 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB71D75EC720079C879 /* FoodCell.swift */; };
 		3C755BBA1D75F2620079C879 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BB91D75F2620079C879 /* Food.swift */; };
 		3C755BBD1D75F78F0079C879 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C755BBC1D75F78F0079C879 /* DateExtension.swift */; };
 		3CA79E501D720177003C894B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA79E4F1D720177003C894B /* RoundedView.swift */; };
+		3CDAB7961D7B1E0300FF0F62 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAB7951D7B1E0300FF0F62 /* CircleButton.swift */; };
 		4A4C38B439ECCA5293887B78 /* Pods_zaporozhye_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C0210EB1D2C1C2C00989062 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutVC.swift; path = ../AboutVC.swift; sourceTree = "<group>"; };
 		3C0678021D4256E90046F6A2 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		3C0678061D4280DF0046F6A2 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		3C0678081D42819F0046F6A2 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -83,14 +89,22 @@
 		3C51D0E11D6B4C2D005A77A7 /* TaxiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxiCell.xib; sourceTree = "<group>"; };
 		3C51D0E41D6B5097005A77A7 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		3C52A79E1D7B3AC3006864ED /* CAGradientLayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayerExtension.swift; sourceTree = "<group>"; };
 		3C6950E11D71BD62007BFCBA /* PlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVC.swift; sourceTree = "<group>"; };
 		3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceImageCell.swift; sourceTree = "<group>"; };
+		3C6B64951D7C4FA8005C0F4B /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		3C6B64971D7C51A4005C0F4B /* CircleButtonWithShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonWithShadow.swift; sourceTree = "<group>"; };
+		3C6B64991D7C54CA005C0F4B /* PlacesMenuButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesMenuButtonView.swift; sourceTree = "<group>"; };
+		3C6B649B1D7C70E9005C0F4B /* RandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandVC.swift; sourceTree = "<group>"; };
+		3C6B649E1D7CAEB4005C0F4B /* ProjectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectVC.swift; sourceTree = "<group>"; };
+		3C6B64A01D7CB1F8005C0F4B /* QuestShadowGreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestShadowGreenView.swift; sourceTree = "<group>"; };
 		3C755BB31D75CC070079C879 /* OrderFoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFoodVC.swift; sourceTree = "<group>"; };
 		3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniRoundedView.swift; sourceTree = "<group>"; };
 		3C755BB71D75EC720079C879 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		3C755BB91D75F2620079C879 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		3C755BBC1D75F78F0079C879 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		3CA79E4F1D720177003C894B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		3CDAB7951D7B1E0300FF0F62 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		8BFEBCA225CA15869426C9AF /* Pods_zaporozhye_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zaporozhye_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95694D57088912243A6592CE /* Pods-zaporozhye-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCD1837B40D17EEE4D4C7C6 /* Pods-zaporozhye-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zaporozhye-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-zaporozhye-app/Pods-zaporozhye-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,18 +164,16 @@
 		3C39F63D1D422D5100B13D73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C6B649D1D7CADFF005C0F4B /* Styling */,
 				3C4540A11D6C387000409D4F /* MenuCell */,
-				3C51D0E41D6B5097005A77A7 /* MaterialView.swift */,
 				3C51D0DF1D6B4C06005A77A7 /* TaxiCell */,
 				3C0F84081D69D68A0035E3B6 /* AccordionHeaderView */,
 				3C0678061D4280DF0046F6A2 /* WeatherCell.swift */,
 				3C0F84071D69D65C0035E3B6 /* FZAccordionTableView */,
-				3C4D97B21D6DBC760002B055 /* MaterialButton.swift */,
 				3C4D97B61D6DCFC40002B055 /* PlaceCell.swift */,
 				3C6950E61D71E260007BFCBA /* PlaceImageCell.swift */,
-				3CA79E4F1D720177003C894B /* RoundedView.swift */,
-				3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */,
 				3C755BB71D75EC720079C879 /* FoodCell.swift */,
+				3C6B64A01D7CB1F8005C0F4B /* QuestShadowGreenView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -170,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				3C0F83FF1D69D5EE0035E3B6 /* TaxiVC.swift */,
-				3C0210EB1D2C1C2C00989062 /* AboutVC.swift */,
 				3C4867541D2A3E4A000B6834 /* MainVC.swift */,
 				3C0678021D4256E90046F6A2 /* WeatherVC.swift */,
 				3C51D0E81D6B8DDC005A77A7 /* MenuVC.swift */,
@@ -178,6 +189,8 @@
 				3C4D97B41D6DC8650002B055 /* PlacesVC.swift */,
 				3C6950E11D71BD62007BFCBA /* PlaceVC.swift */,
 				3C755BB31D75CC070079C879 /* OrderFoodVC.swift */,
+				3C6B649B1D7C70E9005C0F4B /* RandVC.swift */,
+				3C6B649E1D7CAEB4005C0F4B /* ProjectVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -255,10 +268,26 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		3C6B649D1D7CADFF005C0F4B /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				3C51D0E41D6B5097005A77A7 /* MaterialView.swift */,
+				3C4D97B21D6DBC760002B055 /* MaterialButton.swift */,
+				3CA79E4F1D720177003C894B /* RoundedView.swift */,
+				3C755BB51D75E4B40079C879 /* MiniRoundedView.swift */,
+				3CDAB7951D7B1E0300FF0F62 /* CircleButton.swift */,
+				3C6B64951D7C4FA8005C0F4B /* CircleView.swift */,
+				3C6B64971D7C51A4005C0F4B /* CircleButtonWithShadow.swift */,
+				3C6B64991D7C54CA005C0F4B /* PlacesMenuButtonView.swift */,
+			);
+			name = Styling;
+			sourceTree = "<group>";
+		};
 		3C755BBB1D75F76D0079C879 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				3C755BBC1D75F78F0079C879 /* DateExtension.swift */,
+				3C52A79E1D7B3AC3006864ED /* CAGradientLayerExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -405,26 +434,33 @@
 				3C755BBD1D75F78F0079C879 /* DateExtension.swift in Sources */,
 				3C4540AD1D6C3E9600409D4F /* Constants.swift in Sources */,
 				3CA79E501D720177003C894B /* RoundedView.swift in Sources */,
+				3C6B64981D7C51A4005C0F4B /* CircleButtonWithShadow.swift in Sources */,
 				3C4D97B51D6DC8650002B055 /* PlacesVC.swift in Sources */,
 				3C41F6B91D6EE62400BBE2A1 /* DataService.swift in Sources */,
 				3C51D0E21D6B4C2D005A77A7 /* TaxiCell.swift in Sources */,
+				3C52A79F1D7B3AC3006864ED /* CAGradientLayerExtension.swift in Sources */,
 				3C755BB61D75E4B40079C879 /* MiniRoundedView.swift in Sources */,
 				3C51D0D91D6B39C7005A77A7 /* Taxi.swift in Sources */,
 				3C0F84061D69D64A0035E3B6 /* FZAccordionTableView.m in Sources */,
+				3C6B64A11D7CB1F8005C0F4B /* QuestShadowGreenView.swift in Sources */,
 				3C51D0E91D6B8DDC005A77A7 /* MenuVC.swift in Sources */,
 				3C4540A41D6C389A00409D4F /* MenuCell.swift in Sources */,
 				3C755BB41D75CC070079C879 /* OrderFoodVC.swift in Sources */,
 				3C4D97B71D6DCFC40002B055 /* PlaceCell.swift in Sources */,
 				3C4D97B31D6DBC760002B055 /* MaterialButton.swift in Sources */,
+				3C6B649F1D7CAEB4005C0F4B /* ProjectVC.swift in Sources */,
 				3C755BBA1D75F2620079C879 /* Food.swift in Sources */,
 				3C0678091D42819F0046F6A2 /* Day.swift in Sources */,
 				3C4867551D2A3E4A000B6834 /* MainVC.swift in Sources */,
 				3C4540A71D6C3A3200409D4F /* MenuData.swift in Sources */,
 				3C0F84001D69D5EE0035E3B6 /* AccordionHeaderView.swift in Sources */,
+				3C6B649C1D7C70E9005C0F4B /* RandVC.swift in Sources */,
+				3C6B649A1D7C54CA005C0F4B /* PlacesMenuButtonView.swift in Sources */,
 				3C0678071D4280DF0046F6A2 /* WeatherCell.swift in Sources */,
-				3C0210EC1D2C1C2C00989062 /* AboutVC.swift in Sources */,
 				3C4D97B11D6DB8420002B055 /* PlacesMenuVC.swift in Sources */,
 				3C4867531D2A3E4A000B6834 /* AppDelegate.swift in Sources */,
+				3C6B64961D7C4FA8005C0F4B /* CircleView.swift in Sources */,
+				3CDAB7961D7B1E0300FF0F62 /* CircleButton.swift in Sources */,
 				3C0678031D4256E90046F6A2 /* WeatherVC.swift in Sources */,
 				3C51D0E51D6B5097005A77A7 /* MaterialView.swift in Sources */,
 				3C755BB81D75EC720079C879 /* FoodCell.swift in Sources */,

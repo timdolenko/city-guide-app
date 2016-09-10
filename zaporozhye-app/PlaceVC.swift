@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
-import MapKit
+import SCLAlertView
 
-class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
@@ -66,35 +66,19 @@ class PlaceVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         }
         
     }
-    
-    func openMapForPlace(lat: Double, lon: Double) {
-        let latitude: CLLocationDegrees = lat
-        let longitude: CLLocationDegrees = lon
-        
-        let regionDistance: CLLocationDistance = 2000
-        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "\(place.name)"
-        mapItem.openInMaps(launchOptions: options)
-        print("SISPO: Open map with lat: \(lat) and long: \(lon)")
-    }
 
     @IBAction func reservationBtnPressed(_ sender: AnyObject) {
-        DataService.ds.call(phone: place.phone)
+        if place.phone != nil && place.phone != "" {
+            DataService.ds.call(phone: place.phone!)
+        } else {
+            let alertViewIcon = UIImage(named: "phone")
+            SCLAlertView().showError("Sorry", subTitle: "This place has not pnone number to call.", closeButtonTitle: "Close", duration: 3.0, colorStyle: 0xFF0049, circleIconImage: alertViewIcon)
+        }
+        
     }
     
     @IBAction func showOnMapPressed(_ sender: AnyObject) {
-        openMapForPlace(lat: place.geoLocLat, lon: place.geoLocLon)
+        DataService.ds.openMapForPlace(lat: place.geoLocLat, lon: place.geoLocLon, name: place.name)
     }
     
-
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
-    }
 }

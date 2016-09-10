@@ -35,12 +35,8 @@ class MainVC: UIViewController {
         }
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     func weatherBtnTapped() {
-        performSegue(withIdentifier: "WeatherVC", sender: nil)
+        performSegue(withIdentifier: SEGUE_WEATHERVC_FROM_MAIN, sender: nil)
     }
     
     func onForecastLoaded(_ notif: AnyObject) {

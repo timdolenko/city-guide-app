@@ -20,7 +20,7 @@ class Place: NSObject, NSCoding {
     private var _walk: Bool?
     private var _geoLocLat: Double!
     private var _geoLocLon: Double!
-    private var _phone: String!
+    private var _phone: String?
     private var _imgPaths: [String]!
     
     var name: String {
@@ -55,7 +55,7 @@ class Place: NSObject, NSCoding {
         return _geoLocLon
     }
     
-    var phone: String {
+    var phone: String? {
         return _phone
     }
     
@@ -63,7 +63,7 @@ class Place: NSObject, NSCoding {
         return _imgPaths
     }
     
-    init(name: String, placeDesc: String, drink: Bool?, walk: Bool?, eat: Bool?, smoke: Bool?, lat: Double, lon: Double, phone: String, imgPaths: [String]) {
+    init(name: String, placeDesc: String, drink: Bool?, walk: Bool?, eat: Bool?, smoke: Bool?, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
         _name = name
         _placeDescription = placeDesc
         _phone = phone
@@ -88,15 +88,17 @@ class Place: NSObject, NSCoding {
         let placeDesc = aDecoder.decodeObject(forKey: "description") as? String,
         let geoLocLat = aDecoder.decodeObject(forKey: "geoLocLat") as? Double,
         let geoLocLon = aDecoder.decodeObject(forKey: "geoLocLon") as? Double,
-        let phone = aDecoder.decodeObject(forKey: "phone") as? String,
         let imgPaths = aDecoder.decodeObject(forKey: "imgPaths") as? [String] {
             
             self._name = name
             self._placeDescription = placeDesc
             self._geoLocLat = geoLocLat
             self._geoLocLon = geoLocLon
-            self._phone = phone
             self._imgPaths = imgPaths
+        }
+        
+        if let phone = aDecoder.decodeObject(forKey: "phone") as? String {
+            self._phone = phone
         }
         
         if let drink = aDecoder.decodeObject(forKey: "drink") as? Bool,
