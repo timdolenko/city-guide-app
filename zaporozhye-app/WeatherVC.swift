@@ -89,7 +89,11 @@ class WeatherVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource
     func showWeather(_ num: Int) {
         selectedDay = WeatherService.instance.loadedForecast[num]
         mainWeatherImg.image = UIImage(named: "\(WeatherService.instance.getMainImagePath(selectedDay.weatherId))")
+        if NSLocale.preferredLanguages[0] == "ru" {
+            mainWeatherLbl.isHidden = true
+        } else {
         mainWeatherLbl.text = selectedDay.weatherDesc.capitalized
+        }
         windSpeedLbl.text = selectedDay.windSpeed
         if tempType == "C" {
             tempLbl.text = selectedDay.tempC

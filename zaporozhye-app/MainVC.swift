@@ -17,7 +17,6 @@ class MainVC: UIViewController {
     @IBOutlet weak var weatherBtn: UIImageView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         moreBtn.layer.cornerRadius = 4.0
         
         tapRec.addTarget(self, action: #selector(MainVC.weatherBtnTapped))

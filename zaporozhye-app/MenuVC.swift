@@ -21,6 +21,8 @@ class MenuVC: ProjectVC, UITableViewDelegate, UITableViewDataSource, NVActivityI
         tableView.register(UINib(nibName: "MenuCell",bundle: nil), forCellReuseIdentifier: "MenuCell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        print("SISPO: Current language is: \(NSLocale.preferredLanguages[0])")
     }
     
     func isDataAvailable() -> Bool {
@@ -92,8 +94,12 @@ class MenuVC: ProjectVC, UITableViewDelegate, UITableViewDataSource, NVActivityI
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuCell {
             
             if let dict = MenuData.MenuDict["cell\(indexPath.row)"] {
-                if let title = dict["title"] , let imgPath = dict["imgPath"] {
-                    cell.configureCell(title: title, imgPath: imgPath)
+                if let title = dict["title"] , let titleRu = dict["titleRu"], let imgPath = dict["imgPath"] {
+                    if NSLocale.preferredLanguages[0] == "ru" {
+                        cell.configureCell(title: titleRu, imgPath: imgPath)
+                    } else {
+                        cell.configureCell(title: title, imgPath: imgPath)
+                    }
                     return cell
                 }
             }

@@ -22,6 +22,11 @@ class Place: NSObject, NSCoding {
     private var _geoLocLon: Double!
     private var _phone: String?
     private var _imgPaths: [String]!
+    private var _website: URL?
+    
+    var website: URL? {
+        return _website
+    }
     
     var name: String {
         return _name
@@ -63,10 +68,15 @@ class Place: NSObject, NSCoding {
         return _imgPaths
     }
     
-    init(name: String, placeDesc: String, drink: Bool?, walk: Bool?, eat: Bool?, smoke: Bool?, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
+    init(name: String, placeDesc: String, drink: Bool, walk: Bool, eat: Bool, smoke: Bool, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
         _name = name
         _placeDescription = placeDesc
-        _phone = phone
+        
+        if let phone = phone {
+            _phone = phone
+        } else {
+            _phone = ""
+        }
         _imgPaths = imgPaths
         
         _drink = drink
@@ -76,6 +86,39 @@ class Place: NSObject, NSCoding {
         
         _geoLocLon = lon
         _geoLocLat = lat
+    }
+    
+    init(name: String, placeDesc: String, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
+        _name = name
+        _placeDescription = placeDesc
+        
+        if let phone = phone {
+            _phone = phone
+        } else {
+            _phone = ""
+        }
+        _imgPaths = imgPaths
+        
+        _geoLocLon = lon
+        _geoLocLat = lat
+    }
+    
+    init(name: String, placeDesc: String, lat: Double, lon: Double, phone: String?, imgPaths: [String], website: URL) {
+        _name = name
+        _placeDescription = placeDesc
+        
+        if let phone = phone {
+            _phone = phone
+        } else {
+            _phone = ""
+        }
+        _imgPaths = imgPaths
+        
+        _geoLocLon = lon
+        _geoLocLat = lat
+        
+        
+        _website = website
     }
     
     override init() {
@@ -111,6 +154,10 @@ class Place: NSObject, NSCoding {
             self._eat = eat
             self._walk = walk
         }
+        
+        if let website = aDecoder.decodeObject(forKey: "website") as? URL {
+            self._website = website
+        }
     }
     
     func encode(with aCoder: NSCoder) {
@@ -124,5 +171,6 @@ class Place: NSObject, NSCoding {
         aCoder.encode(self._imgPaths, forKey: "imgPaths")
         aCoder.encode(self._geoLocLat, forKey: "geoLocLat")
         aCoder.encode(self._geoLocLon, forKey: "geoLocLon")
+        aCoder.encode(self._website, forKey: "website")
     }
 }

@@ -1,0 +1,37 @@
+/* 
+  Localized.strings
+  zaporozhye-app
+
+  Created by Timofey Dolenko on 9/10/16.
+  Copyright © 2016 Timofey Dolenko. All rights reserved.
+*/
+
+
+//Weather VC
+"WEATHER_KEY_TU" = "TU";
+"WEATHER_KEY_WE" = "WE";
+"WEATHER_KEY_TH" = "TH";
+"WEATHER_KEY_FR" = "FR";
+"WEATHER_KEY_SA" = "SA";
+"WEATHER_KEY_SU" = "SU";
+"WEATHER_KEY_MO" = "MO";
+
+//Menu VC
+"PLACES_TO_VISIT" = "Places to visit";
+"TAXI" = "";
+"ORDER_FOOD" = "Order Food";
+"HOTELS" = "Hotels";
+"SHOPPING_MALLS" = "Shopping Malls";
+"ABOUT_CITY" = "About City";
+"WEATHER" = "Weather";
+
+
+//Other
+"KEY_MALLS" = "Malls";
+"KEY_TAXI" = "Taxi";
+"KEY_EAT" = "Eat";
+"KEY_DRINK" = "Drink";
+"KEY_SMOKE" = "Smoke";
+"KEY_WALK" = "Walk";
+"KEY_HOTELS" = "Hotels";
+"KEY_FOOD" = "Food";

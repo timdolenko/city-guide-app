@@ -15,11 +15,15 @@ class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
+    @IBOutlet weak var reservationLbl: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var websiteBtnView: RoundedView!
+    @IBOutlet weak var websiteBtn: UIButton!
     @IBOutlet weak var reservationBtn: UIButton!
     @IBOutlet weak var reservationView: RoundedView!
     var place = Place()
+    var type = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +38,25 @@ class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         if place.phone == "" {
             reservationBtn.isHidden = true
             reservationView.isHidden = true
+            phoneLbl.isHidden = true
+        } else {
+            phoneLbl.text = place.phone
         }
-        phoneLbl.text = place.phone
+        
+        if type == KEY_MALLS {
+            if NSLocale.preferredLanguages[0] == "ru" {
+                reservationLbl.text = "Информация"
+            } else {
+                reservationLbl.text = "Information"
+            }
+        }
+        
+        if place.website == nil {
+            websiteBtn.isHidden = true
+            websiteBtnView.isHidden = true
+        } else {
+            phoneLbl.isHidden = true
+        }
         
     }
     
@@ -67,6 +88,9 @@ class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         
     }
 
+    @IBAction func websiteBtnPressed(_ sender: AnyObject) {
+    }
+    
     @IBAction func reservationBtnPressed(_ sender: AnyObject) {
         if place.phone != nil && place.phone != "" {
             DataService.ds.call(phone: place.phone!)

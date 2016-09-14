@@ -73,7 +73,12 @@ extension TaxiVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: AccordionHeaderView.kAccordionHeaderViewReuseIdentifier) as? AccordionHeaderView {
-            header.taxiNameLbl.text = taxiArray[section].name
+            if NSLocale.preferredLanguages[0] == "ru" {
+                header.taxiNameLbl.text = taxiArray[section].nameRu
+                header.moreLbl.text = "Еще"
+            } else {
+                header.taxiNameLbl.text = taxiArray[section].name
+            }
             header.taxiNumberLbl.text = taxiArray[section].phones[0]
             
             if taxiArray[section].phones.count <= 1 {

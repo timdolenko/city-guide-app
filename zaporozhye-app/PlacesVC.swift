@@ -18,7 +18,7 @@ class PlacesVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLlb.text = type
+        titleLlb.text = type.localized
         placesArray = DataService.ds.getPlaceArrayOf(type: type)
         collectionView.reloadData()
 
@@ -61,6 +61,7 @@ class PlacesVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource,
             if let placeVC = segue.destination as? PlaceVC {
                 if let place = sender as? Place {
                     placeVC.place = place
+                    placeVC.type = self.type
                 }
             }
         }

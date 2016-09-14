@@ -225,8 +225,9 @@ class DataService {
     
     func getTaxiObjectFrom(snapData: Dictionary<String,AnyObject>) -> Taxi {
         if let name = snapData["name"] as? String,
+            let nameRu = snapData["nameRu"] as? String,
             let phones = snapData["phones"] as? Array<String> {
-            let taxi = Taxi(phones: phones, name: name)
+            let taxi = Taxi(phones: phones, name: name, nameRu: nameRu)
             print("SISPO: Successfully downcasted taxi snapData with name: \(name)")
             return taxi
         } else {
@@ -234,7 +235,7 @@ class DataService {
         }
         
         
-        return Taxi(phones: [""], name: "")
+        return Taxi(phones: [""], name: "", nameRu: "")
     }
     
     func saveToLocalData(arrayOfPlaces: [Place], of type: String) {
@@ -263,7 +264,6 @@ class DataService {
     func getPlaceObjectFrom(snapData: Dictionary<String,AnyObject>) -> Place {
         if let name = snapData["name"] as? String,
         let placeDesc = snapData["description"] as? String,
-        let phone = snapData["phone"] as? String,
         let imgPaths = snapData["imgPaths"] as? Array<String>,
             let geoLoc = snapData["geoLoc"] as? Dictionary<String,Double> {
             
@@ -272,6 +272,9 @@ class DataService {
             if let lat = geoLoc["lat"], let lon = geoLoc["lon"] {
                 
                 print("SISPO: Successfully downcasted geoLoc dictionary with lat: \(lat) and lon: \(lon)")
+                
+                let phone = snapData["phone"] as? String
+                
                 
                 if let smoke = snapData["smoke"] as? Bool,
                 let drink = snapData["drink"] as? Bool,
@@ -283,11 +286,17 @@ class DataService {
                     let place = Place(name: name, placeDesc: placeDesc, drink: drink, walk: walk, eat: eat, smoke: smoke, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
                     
                     return place
+                } else if let website = snapData["website"] as? String, let websiteURL = URL(string: website) {
+                    
+                    print("SISPO: Returning place with website object")
+                    
+                    let place = Place(name: name, placeDesc: placeDesc, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths, website: websiteURL)
+                    return place
                 } else {
                     
                     print("SISPO: Returning basic place object")
                     
-                    let place = Place(name: name, placeDesc: placeDesc, drink: nil, walk: nil, eat: nil, smoke: nil, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
+                    let place = Place(name: name, placeDesc: placeDesc, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
                     return place
                 }
                 

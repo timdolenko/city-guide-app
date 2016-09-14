@@ -35,19 +35,19 @@ class Day: NSObject, NSCoding {
         
                 switch weekDay{
                 case 1:
-                    weekDayString = "SU"
+                    weekDayString = "WEATHER_KEY_SU".localized
                 case 2:
-                    weekDayString = "MO"
+                    weekDayString = "WEATHER_KEY_MO".localized
                 case 3:
-                    weekDayString = "TU"
+                    weekDayString = "WEATHER_KEY_TU".localized
                 case 4:
-                    weekDayString = "WE"
+                    weekDayString = "WEATHER_KEY_WE".localized
                 case 5:
-                    weekDayString = "TH"
+                    weekDayString = "WEATHER_KEY_TH".localized
                 case 6:
-                    weekDayString = "FR"
+                    weekDayString = "WEATHER_KEY_FR".localized
                 case 7:
-                    weekDayString = "SA"
+                    weekDayString = "WEATHER_KEY_SA".localized
                 default:
                     weekDayString = "Er"
                 }
