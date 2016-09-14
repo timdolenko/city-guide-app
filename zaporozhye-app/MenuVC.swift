@@ -70,7 +70,7 @@ class MenuVC: ProjectVC, UITableViewDelegate, UITableViewDataSource, NVActivityI
             } else {
                 let size = CGSize(width: 30, height:30)
                 
-                startActivityAnimating(size, message: "Loading...", type: NVActivityIndicatorType.ballPulse)
+                startActivityAnimating(size, message: "LOADING".localized, type: NVActivityIndicatorType.ballPulse)
                 NotificationCenter.default.addObserver(self, selector: #selector(MenuVC.performSegueAfterDownload), name: Notification.Name("dataLoaded"), object: nil)
             }
         case 5, 6:

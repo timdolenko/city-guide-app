@@ -11,6 +11,7 @@ import Foundation
 class Food: NSObject, NSCoding {
     
     private var _name: String!
+    private var _menuRu: String!
     private var _menu: String!
     private var _phones: [String]!
     private var _imgPath: String!
@@ -20,6 +21,10 @@ class Food: NSObject, NSCoding {
     
     var name: String {
         return _name
+    }
+    
+    var menuRu: String {
+        return _menuRu
     }
     
     var menu: String! {
@@ -46,9 +51,10 @@ class Food: NSObject, NSCoding {
         return _website
     }
     
-    init(name: String, menu: String, phones: [String], imgPath: String, timeOpen: Int, timeClose: Int, website: URL) {
+    init(name: String, menu: String, menuRu: String, phones: [String], imgPath: String, timeOpen: Int, timeClose: Int, website: URL) {
         _name = name
         _menu = menu
+        _menuRu = menuRu
         _phones = phones
         _imgPath = imgPath
         _timeOpen = timeOpen
@@ -74,6 +80,7 @@ class Food: NSObject, NSCoding {
         self.init()
         if let name = aDecoder.decodeObject(forKey: "name") as? String,
             let menu = aDecoder.decodeObject(forKey: "menu") as? String,
+            let menuRu = aDecoder.decodeObject(forKey: "menuRu") as? String,
             let phones = aDecoder.decodeObject(forKey: "phones") as? [String],
             let imgPath = aDecoder.decodeObject(forKey: "imgPath") as? String,
             let timeOpen = aDecoder.decodeObject(forKey: "timeOpen") as? Int,
@@ -82,6 +89,7 @@ class Food: NSObject, NSCoding {
             
             _name = name
             _menu = menu
+            _menuRu = menuRu
             _phones = phones
             _imgPath = imgPath
             _timeOpen = timeOpen
@@ -93,6 +101,7 @@ class Food: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(_name, forKey: "name")
         aCoder.encode(_menu, forKey: "menu")
+        aCoder.encode(_menuRu, forKey: "menuRu")
         aCoder.encode(_phones, forKey: "phones")
         aCoder.encode(_imgPath, forKey: "imgPath")
         aCoder.encode(_timeOpen, forKey: "timeOpen")

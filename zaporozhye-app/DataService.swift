@@ -263,6 +263,8 @@ class DataService {
     
     func getPlaceObjectFrom(snapData: Dictionary<String,AnyObject>) -> Place {
         if let name = snapData["name"] as? String,
+        let nameRu = snapData["nameRu"] as? String,
+        let descRu = snapData["descRu"] as? String,
         let placeDesc = snapData["description"] as? String,
         let imgPaths = snapData["imgPaths"] as? Array<String>,
             let geoLoc = snapData["geoLoc"] as? Dictionary<String,Double> {
@@ -283,20 +285,20 @@ class DataService {
 
                     print("SISPO: Returning 'place to visit' object")
                     
-                    let place = Place(name: name, placeDesc: placeDesc, drink: drink, walk: walk, eat: eat, smoke: smoke, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
+                    let place = Place(name: name, nameRu: nameRu, placeDesc: placeDesc, descRu: descRu, drink: drink, walk: walk, eat: eat, smoke: smoke, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
                     
                     return place
                 } else if let website = snapData["website"] as? String, let websiteURL = URL(string: website) {
                     
                     print("SISPO: Returning place with website object")
                     
-                    let place = Place(name: name, placeDesc: placeDesc, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths, website: websiteURL)
+                    let place = Place(name: name, nameRu: nameRu, placeDesc: placeDesc, descRu: descRu, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths, website: websiteURL)
                     return place
                 } else {
                     
                     print("SISPO: Returning basic place object")
                     
-                    let place = Place(name: name, placeDesc: placeDesc, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
+                    let place = Place(name: name, nameRu: nameRu, placeDesc: placeDesc, descRu: descRu, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
                     return place
                 }
                 
@@ -316,6 +318,7 @@ class DataService {
         if let name = snap["name"] as? String,
         let imgPath = snap["imgPath"] as? String,
         let menu = snap["menu"] as? String,
+        let menuRu = snap["menuRu"] as? String,
         let website = snap["website"] as? String,
         let phones = snap["phones"] as? [String],
         let time = snap["time"] as? Dictionary<String, Int> {
@@ -329,7 +332,7 @@ class DataService {
                 if let websiteUrl = URL(string: website) {
                     print("SISPO: Successfully created food website url")
                     
-                    let food = Food(name: name, menu: menu, phones: phones, imgPath: imgPath, timeOpen: open, timeClose: close, website: websiteUrl)
+                    let food = Food(name: name, menu: menu, menuRu: menuRu, phones: phones, imgPath: imgPath, timeOpen: open, timeClose: close, website: websiteUrl)
                     return food
                 }
             }
@@ -342,7 +345,12 @@ class DataService {
     func getPlaceArrayOf(type: String) -> [Place] {
         
         var filteredPlaces = [Place]()
-            
+        for place in placesArray {
+            print("SISPO: Place obj 1011: \(place.name)")
+            if let eat = place.eat {
+                print("We have eat")
+            }
+        }
             switch type {
             case KEY_EAT:
                 filteredPlaces = placesArray.filter({ (place:Place) -> Bool in

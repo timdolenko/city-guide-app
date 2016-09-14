@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+//Localization
+let CURRENT_LANG = NSLocale.preferredLanguages[0]
+
 //Keys
 let KEY_FORECAST = "forecast"
 let KEY_PLACES = "places"

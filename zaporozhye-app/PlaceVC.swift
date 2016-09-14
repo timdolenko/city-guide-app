@@ -33,8 +33,14 @@ class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        titleLbl.text = place.name
-        descLbl.text = place.placeDescription
+        if CURRENT_LANG == "ru" {
+            titleLbl.text = place.nameRu
+            descLbl.text = place.descRu
+        } else {
+            titleLbl.text = place.name
+            descLbl.text = place.placeDescription
+        }
+        
         if place.phone == "" {
             reservationBtn.isHidden = true
             reservationView.isHidden = true
@@ -44,7 +50,7 @@ class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         }
         
         if type == KEY_MALLS {
-            if NSLocale.preferredLanguages[0] == "ru" {
+            if CURRENT_LANG == "ru" {
                 reservationLbl.text = "Информация"
             } else {
                 reservationLbl.text = "Information"
@@ -96,7 +102,7 @@ class PlaceVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSource, 
             DataService.ds.call(phone: place.phone!)
         } else {
             let alertViewIcon = UIImage(named: "phone")
-            SCLAlertView().showError("Sorry", subTitle: "This place has not pnone number to call.", closeButtonTitle: "Close", duration: 3.0, colorStyle: 0xFF0049, circleIconImage: alertViewIcon)
+            SCLAlertView().showError("SORRY".localized, subTitle: "THIS_PLACE_HAS_NO_PHONE".localized, closeButtonTitle: "CLOSE".localized, duration: 3.0, colorStyle: 0xFF0049, circleIconImage: alertViewIcon)
         }
         
     }

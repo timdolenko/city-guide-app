@@ -64,7 +64,11 @@ class OrderFoodVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedFood = foodArray[indexPath.row]
-        menuLbl.text = selectedFood.menu
+        if CURRENT_LANG == "ru" {
+            menuLbl.text = selectedFood.menuRu
+        } else {
+            menuLbl.text = selectedFood.menu
+        }
         nameLbl.text = selectedFood.name
         if infoViewIsHidden {
             infoViewIsHidden = false
@@ -138,7 +142,7 @@ class OrderFoodVC: ProjectVC, UICollectionViewDelegate, UICollectionViewDataSour
         
         let alertViewIcon = UIImage(named: "phone")
         
-        alertView.showSuccess("Please", subTitle: "Select a phone", colorStyle: 0x38A9FE, circleIconImage: alertViewIcon, animationStyle: .bottomToTop)
+        alertView.showSuccess("PLEASE".localized, subTitle: "SELECT_A_PHONE".localized, closeButtonTitle: "DONE".localized, colorStyle: 0x38A9FE, circleIconImage: alertViewIcon, animationStyle: .bottomToTop)
         
         
     }

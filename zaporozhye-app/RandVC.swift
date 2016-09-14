@@ -45,8 +45,13 @@ class RandVC: ProjectVC {
     }
     
     func updateUI() {
-        descLbl.text = randomPlace.placeDescription
-        nameLbl.text = randomPlace.name
+        if CURRENT_LANG == "ru" {
+            descLbl.text = randomPlace.descRu
+            nameLbl.text = randomPlace.nameRu
+        } else {
+            descLbl.text = randomPlace.placeDescription
+            nameLbl.text = randomPlace.name
+        }
         
         let path = randomPlace.imgPaths[0]
         if let img = DataService.ds.imageFor(path: path) {
@@ -99,7 +104,7 @@ class RandVC: ProjectVC {
             DataService.ds.call(phone: randomPlace.phone!)
         } else {
             let alertViewIcon = UIImage(named: "phone")
-            SCLAlertView().showError("Sorry", subTitle: "This place has not pnone number to call.", closeButtonTitle: "Close", duration: 3.0, colorStyle: 0xFF0049, circleIconImage: alertViewIcon)
+            SCLAlertView().showError("SORRY".localized, subTitle: "THIS_PLACE_HAS_NO_PHONE".localized, closeButtonTitle: "CLOSE".localized, duration: 3.0, colorStyle: 0xFF0049, circleIconImage: alertViewIcon)
         }
     }
     @IBAction func showOnMapBtnPressed(_ sender: AnyObject) {

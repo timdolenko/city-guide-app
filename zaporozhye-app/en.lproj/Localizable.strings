@@ -16,22 +16,22 @@
 "WEATHER_KEY_SU" = "SU";
 "WEATHER_KEY_MO" = "MO";
 
-//Menu VC
-"PLACES_TO_VISIT" = "Places to visit";
-"TAXI" = "";
-"ORDER_FOOD" = "Order Food";
-"HOTELS" = "Hotels";
-"SHOPPING_MALLS" = "Shopping Malls";
-"ABOUT_CITY" = "About City";
-"WEATHER" = "Weather";
-
 
 //Other
-"KEY_MALLS" = "Malls";
-"KEY_TAXI" = "Taxi";
-"KEY_EAT" = "Eat";
-"KEY_DRINK" = "Drink";
-"KEY_SMOKE" = "Smoke";
-"KEY_WALK" = "Walk";
-"KEY_HOTELS" = "Hotels";
-"KEY_FOOD" = "Food";
+"Malls" = "Malls";
+"Taxi" = "Taxi";
+"Eat" = "Eat";
+"Drink" = "Drink";
+"Smoke" = "Smoke";
+"Walk" = "Walk";
+"Hotels" = "Hotels";
+"Food" = "Food";
+
+//Alerts
+"PLEASE" = "Please";
+"SELECT_A_PHONE" = "Select a phone";
+"SORRY" = "Sorry";
+"THIS_PLACE_HAS_NO_PHONE" = "This place has not pnone number to call.";
+"CLOSE" = "Close";
+"LOADING" = "Loading...";
+"DONE" = "Done";

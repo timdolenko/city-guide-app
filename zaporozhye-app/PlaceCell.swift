@@ -17,8 +17,12 @@ class PlaceCell: UICollectionViewCell {
     
     
     func configureCell(place: Place) {
-        placeLbl.text = place.name
         
+        if CURRENT_LANG == "ru" {
+            placeLbl.text = place.nameRu
+        } else {
+            placeLbl.text = place.name
+        }
         if let img = DataService.ds.imageFor(path: place.imgPaths[0]) {
             self.placeImg.image = img
         } else {

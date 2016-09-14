@@ -6,7 +6,7 @@
   Copyright © 2016 Timofey Dolenko. All rights reserved.
 */
 
-"Hi" = "Привет";
+
 //Weather VC
 "WEATHER_KEY_TU" = "ВТ";
 "WEATHER_KEY_WE" = "СР";
@@ -26,3 +26,12 @@
 "Walk" = "Прогулка";
 "Hotels" = "Отели";
 "Food" = "Заказ еды";
+
+//Alerts
+"PLEASE" = "Пожалуйста";
+"SELECT_A_PHONE" = "Выберите телефон";
+"SORRY" = "Извините";
+"THIS_PLACE_HAS_NO_PHONE" = "Для этого места не предусмотрен номер телефона.";
+"CLOSE" = "Закрыть";
+"LOADING" = "Загрузка...";
+"DONE" = "Готово";

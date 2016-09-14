@@ -13,6 +13,8 @@ import Firebase
 class Place: NSObject, NSCoding {
     
     private var _name: String!
+    private var _nameRu: String!
+    private var _descRu: String!
     private var _placeDescription: String!
     private var _drink: Bool?
     private var _eat: Bool?
@@ -26,6 +28,14 @@ class Place: NSObject, NSCoding {
     
     var website: URL? {
         return _website
+    }
+    
+    var nameRu: String {
+        return _nameRu
+    }
+    
+    var descRu: String {
+        return _descRu
     }
     
     var name: String {
@@ -68,9 +78,11 @@ class Place: NSObject, NSCoding {
         return _imgPaths
     }
     
-    init(name: String, placeDesc: String, drink: Bool, walk: Bool, eat: Bool, smoke: Bool, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
+    init(name: String, nameRu: String, placeDesc: String, descRu: String, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
         _name = name
         _placeDescription = placeDesc
+        _nameRu = nameRu
+        _descRu = descRu
         
         if let phone = phone {
             _phone = phone
@@ -78,45 +90,23 @@ class Place: NSObject, NSCoding {
             _phone = ""
         }
         _imgPaths = imgPaths
+        
+        _geoLocLon = lon
+        _geoLocLat = lat
+    }
+
+    
+    convenience init(name: String, nameRu: String, placeDesc: String, descRu: String, drink: Bool, walk: Bool, eat: Bool, smoke: Bool, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
+        self.init(name: name, nameRu: nameRu, placeDesc: placeDesc, descRu: descRu, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
         
         _drink = drink
         _walk = walk
         _eat = eat
         _smoke = smoke
-        
-        _geoLocLon = lon
-        _geoLocLat = lat
     }
     
-    init(name: String, placeDesc: String, lat: Double, lon: Double, phone: String?, imgPaths: [String]) {
-        _name = name
-        _placeDescription = placeDesc
-        
-        if let phone = phone {
-            _phone = phone
-        } else {
-            _phone = ""
-        }
-        _imgPaths = imgPaths
-        
-        _geoLocLon = lon
-        _geoLocLat = lat
-    }
-    
-    init(name: String, placeDesc: String, lat: Double, lon: Double, phone: String?, imgPaths: [String], website: URL) {
-        _name = name
-        _placeDescription = placeDesc
-        
-        if let phone = phone {
-            _phone = phone
-        } else {
-            _phone = ""
-        }
-        _imgPaths = imgPaths
-        
-        _geoLocLon = lon
-        _geoLocLat = lat
-        
+    convenience init(name: String, nameRu: String, placeDesc: String, descRu: String, lat: Double, lon: Double, phone: String?, imgPaths: [String], website: URL) {
+        self.init(name: name, nameRu: nameRu, placeDesc: placeDesc, descRu: descRu, lat: lat, lon: lon, phone: phone, imgPaths: imgPaths)
         
         _website = website
     }
@@ -128,13 +118,17 @@ class Place: NSObject, NSCoding {
     required convenience init?(coder aDecoder: NSCoder) {
         self.init()
         if let name = aDecoder.decodeObject(forKey: "name") as? String,
+        let nameRu = aDecoder.decodeObject(forKey: "nameRu") as? String,
         let placeDesc = aDecoder.decodeObject(forKey: "description") as? String,
+        let descRu = aDecoder.decodeObject(forKey: "descRu") as? String,
         let geoLocLat = aDecoder.decodeObject(forKey: "geoLocLat") as? Double,
         let geoLocLon = aDecoder.decodeObject(forKey: "geoLocLon") as? Double,
         let imgPaths = aDecoder.decodeObject(forKey: "imgPaths") as? [String] {
             
             self._name = name
+            self._nameRu = nameRu
             self._placeDescription = placeDesc
+            self._descRu = descRu
             self._geoLocLat = geoLocLat
             self._geoLocLon = geoLocLon
             self._imgPaths = imgPaths
@@ -162,7 +156,9 @@ class Place: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self._name, forKey: "name")
+        aCoder.encode(self._nameRu, forKey: "nameRu")
         aCoder.encode(self._placeDescription, forKey: "description")
+        aCoder.encode(self._descRu, forKey: "descRu")
         aCoder.encode(self._drink, forKey: "drink")
         aCoder.encode(self._walk, forKey: "walk")
         aCoder.encode(self._smoke, forKey: "smoke")
